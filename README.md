@@ -1,126 +1,130 @@
-# 👨‍💻 Meu Portfólio de Aprendizado
+# 👨‍💻 Portfólio de Aprendizado | Desenvolvimento Back-end Java
 
-Bem-vindo ao meu repositório! 🚀
-Este espaço foi criado para documentar minha evolução como desenvolvedor, reunindo os cursos que concluí, conceitos aprendidos e exemplos práticos.
-
----
-
-## 🎯 Objetivo
-
-Meu foco é me tornar um desenvolvedor **Back-end Java**, com base sólida em lógica de programação, boas práticas e desenvolvimento de sistemas.
+<p align="center">
+  <b>Em evolução constante 🚀</b><br>
+  Focado em desenvolvimento Back-end com Java
+</p>
 
 ---
 
-## 🧠 Áreas de foco
+## 🎯 Sobre mim
 
-* ☕ Java
-* ⚙️ Desenvolvimento Back-end
-* 🌐 Fundamentos de Front-end
-* 🔄 Metodologias ágeis
+Sou um desenvolvedor em formação com foco em **Back-end Java**, construindo uma base sólida em lógica de programação, orientação a objetos e boas práticas de desenvolvimento.
+
+Tenho como objetivo aplicar meus conhecimentos na construção de sistemas eficientes, organizados e escaláveis.
 
 ---
 
-## 📚 Cursos
+## 🧠 Stack em desenvolvimento
 
-### 🟢 Algoritmos e Lógica de Programação
+<p>
+  ☕ Java &nbsp;&nbsp;
+  🧱 Programação Orientada a Objetos &nbsp;&nbsp;
+  ⚙️ Lógica de Programação &nbsp;&nbsp;
+  🔄 Metodologias Ágeis &nbsp;&nbsp;
+  🛠️ Git & GitHub &nbsp;&nbsp;
+  🌐 Fundamentos de Front-end
+</p>
 
-* Status: ✅ Concluído
+---
 
-📌 O que aprendi:
+## 📚 Formação e Aprendizado
 
-* Estruturas condicionais
-* Laços de repetição
-* Variáveis e tipos de dados
+### 🟢 Fundamentos de Programação
+
+* Algoritmos e Lógica de Programação
+* Estruturas condicionais e de repetição
 * Resolução de problemas
 
-🔗 [Ver detalhes](./cursos/curso-logica.md)
+📂 Detalhes: `./cursos/curso-logica.md`
 
 ---
 
-### ☕ Java Básico
+### ☕ Desenvolvimento com Java
 
-* Status: ✅ Concluído
-
-📌 O que aprendi:
-
-* Sintaxe do Java
-* Estruturas de controle
-* Métodos
+* Sintaxe e estrutura da linguagem
+* Métodos e organização de código
 * Introdução à orientação a objetos
 
-🔗 [Ver detalhes](./cursos/curso-java.md)
+📂 Detalhes: `./cursos/curso-java.md`
 
 ---
 
-### 🧱 Programação Orientada a Objetos (POO)
+### 🧱 Programação Orientada a Objetos
 
-* Status: 🚧 Em andamento
-
-📌 O que estou aprendendo:
+🚧 Em andamento
 
 * Classes e objetos
 * Encapsulamento
-* Herança
-* Polimorfismo
+* Herança e polimorfismo
 
-🔗 [Ver detalhes](./cursos/curso-poo.md)
-
----
-
-### 🔄 Scrum e Metodologias Ágeis
-
-* Status: ✅ Concluído
-
-📌 O que aprendi:
-
-* Scrum (sprints, backlog, daily)
-* Trabalho em equipe
-* Organização de projetos
-* Entrega contínua
-
-🔗 [Ver detalhes](./cursos/curso-agil.md)
+📂 Detalhes: `./cursos/curso-poo.md`
 
 ---
 
-### 🛠️ Git e GitHub
+### 🔄 Metodologias Ágeis
 
-* Status: ✅ Concluído
+* Scrum (Sprints, Daily, Backlog)
+* Organização e fluxo de trabalho
+* Colaboração em equipe
 
-📌 O que aprendi:
-
-* Versionamento de código
-* Commits e branches
-* Pull requests
-* Boas práticas com Git
-
-🔗 [Ver detalhes](./cursos/curso-git.md)
+📂 Detalhes: `./cursos/curso-agil.md`
 
 ---
 
-## 📊 Progresso
+### 🛠️ Versionamento de Código
 
-* ✅ Cursos concluídos: 5
-* 🚧 Em andamento: 1
+* Git (commits, branches, merge)
+* GitHub (repositórios e fluxo de trabalho)
 
----
-
-## 📅 Jornada
-
-* 📍 Início: Lógica de programação
-* 📍 Evolução: Java e POO
-* 📍 Atual: Back-end com boas práticas
-* 🎯 Próximo passo: APIs e frameworks Java (Spring)
+📂 Detalhes: `./cursos/curso-git.md`
 
 ---
 
-## 🚀 Objetivo profissional
+## 📊 Evolução
 
-Busco minha primeira oportunidade como desenvolvedor, com foco em Back-end Java, aplicando boas práticas, organização de código e aprendizado contínuo.
+```text
+Lógica de Programação  ██████████ 100%
+Java Básico            █████████░ 80%
+POO                    ██████░░░░ 60%
+Git & GitHub           ████████░░ 75%
+Metodologias Ágeis     ████████░░ 80%
+```
 
 ---
 
-## 📌 Observação
+## 🚀 Próximos passos
 
-Este repositório não contém projetos completos, mas sim um resumo estruturado do meu aprendizado, com exemplos e conceitos aplicados.
+* 📌 Estruturas de Dados
+* 📌 Java Avançado
+* 📌 Spring Boot
+* 📌 Desenvolvimento de APIs REST
 
 ---
+
+## 💻 Abordagem de aprendizado
+
+Busco sempre:
+
+* Entender o **porquê** das soluções
+* Escrever código limpo e organizado
+* Aplicar conceitos na prática
+* Evoluir de forma consistente
+
+---
+
+## 📌 Sobre este repositório
+
+Este repositório foi criado como um **portfólio de aprendizado**, reunindo:
+
+* Resumos técnicos
+* Conceitos fundamentais
+* Exemplos práticos de código
+
+Não se trata de um repositório de projetos completos, mas sim de uma documentação estruturada da minha evolução como desenvolvedor.
+
+---
+
+## 📫 Contato
+
+Em breve...
