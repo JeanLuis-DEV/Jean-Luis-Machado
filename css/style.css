@@ -281,22 +281,26 @@ a:focus-visible {
 
 /* Competências */
 .skills-section {
-    border-top: 1px solid var(--border);
-    background: #0b0b0b;
+    padding: 40px 0;
+    background: transparent;
 }
 
 .section-heading {
     max-width: 850px;
-    margin: 0 auto 48px;
+    margin: 0 auto 24px;
     text-align: center;
+}
+
+.skills-section .page-title {
+    font-size: 3.1rem;
 }
 
 .section-description {
     max-width: 710px;
-    margin: 20px auto 0;
+    margin: 14px auto 0;
     color: var(--text-secondary);
-    font-size: 1.1rem;
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 .skills-grid {
@@ -307,7 +311,7 @@ a:focus-visible {
 }
 
 .info-card {
-    padding: 32px;
+    padding: 20px;
     border: 1px solid var(--border);
     border-radius: 16px;
     background: var(--surface);
@@ -315,12 +319,56 @@ a:focus-visible {
 
 .info-card h3 {
     margin: 0 0 28px;
-    font-size: 1.4rem;
+    font-size: 1.25rem;
+}
+
+.card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.card-header h3 {
+    margin: 3px 0 0;
+}
+
+.card-icon {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    color: var(--gold);
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+}
+
+.card-title-line {
+    display: block;
+    width: 50px;
+    height: 2px;
+    margin-top: 12px;
+    background: var(--gold);
 }
 
 .skill-item {
-    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 0;
     border-bottom: 1px solid var(--border);
+}
+
+.skill-icon {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    color: var(--gold);
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
 }
 
 .skill-item h4,
@@ -347,15 +395,23 @@ a:focus-visible {
     color: #777777;
 }
 
+.secondary-skill .skill-icon {
+    color: #777777;
+}
+
 .certificate-card {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
+.certificate-card .card-header {
+    text-align: left;
+}
+
 .certificate-acronym {
-    margin: 18px 0 8px;
-    font-size: 2.6rem;
+    margin: 4px 0;
+    font-size: 2.1rem;
     font-weight: bold;
     letter-spacing: 0.02em;
 }
@@ -363,12 +419,12 @@ a:focus-visible {
 .certificate-name {
     max-width: 280px;
     margin: 0 auto;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     line-height: 1.35;
 }
 
 .certificate-company {
-    margin: 14px 0 30px;
+    margin: 8px 0 14px;
     color: var(--gold);
     font-size: 1.1rem;
 }
@@ -376,7 +432,7 @@ a:focus-visible {
 .certificate-details {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 20px 0;
+    padding: 12px 0;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
     color: var(--text-secondary);
@@ -388,6 +444,18 @@ a:focus-visible {
     padding: 0 12px;
 }
 
+.calendar-icon {
+    width: 22px;
+    height: 22px;
+    margin-right: 5px;
+    color: var(--gold);
+    vertical-align: middle;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+}
+
 .certificate-details p + p {
     border-left: 1px solid var(--border);
 }
@@ -397,12 +465,6 @@ a:focus-visible {
     margin-top: 5px;
     color: var(--gold);
     font-weight: normal;
-}
-
-.certificate-link {
-    margin-top: auto;
-    padding-top: 28px;
-    color: var(--gold);
 }
 
 .education-card > h4,
@@ -417,16 +479,16 @@ a:focus-visible {
 }
 
 .education-block {
-    margin-top: 26px;
-    padding-top: 22px;
+    margin-top: 14px;
+    padding-top: 14px;
     border-top: 1px solid var(--border);
 }
 
 .education-block ul {
-    margin: 14px 0 0;
+    margin: 10px 0 0;
     padding-left: 20px;
     color: var(--text-secondary);
-    line-height: 1.8;
+    line-height: 1.55;
 }
 
 .education-block li::marker {
@@ -526,6 +588,10 @@ a:focus-visible {
         font-size: 2.7rem;
     }
 
+    .skills-section .page-title {
+        font-size: 2.7rem;
+    }
+
     .about-decoration {
         gap: 18px;
     }
@@ -582,6 +648,10 @@ a:focus-visible {
     }
 
     .page-title {
+        font-size: 2.2rem;
+    }
+
+    .skills-section .page-title {
         font-size: 2.2rem;
     }
 }
