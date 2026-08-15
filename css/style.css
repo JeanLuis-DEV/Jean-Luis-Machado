@@ -53,6 +53,10 @@ a:focus-visible {
     gap: 24px;
 }
 
+.navigation-no-brand {
+    justify-content: flex-end;
+}
+
 .brand {
     font-size: 1.1rem;
     font-weight: bold;
@@ -161,6 +165,11 @@ a:focus-visible {
 .about-section,
 .skills-section {
     padding: 96px 0;
+}
+
+.about-section {
+    min-height: 100vh;
+    padding: 64px 0;
 }
 
 .about-content {
@@ -500,6 +509,292 @@ a:focus-visible {
     color: var(--text-secondary);
 }
 
+/* Projetos */
+.projects-section {
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+.projects-section .container {
+    max-width: 1500px;
+}
+
+.projects-heading {
+    margin-bottom: 24px;
+}
+
+.projects-title-line {
+    display: block;
+    width: 72px;
+    height: 2px;
+    margin: 16px auto 0;
+    background: var(--gold);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+}
+
+.project-card {
+    display: block;
+    grid-column: span 4;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--surface);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+    border-color: #75602e;
+    transform: translateY(-4px);
+}
+
+.project-card img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 18px 20px 20px;
+}
+
+.project-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.project-title h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.project-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.project-icon {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    color: var(--gold);
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+}
+
+.project-status {
+    flex-shrink: 0;
+    padding: 5px 10px;
+    border: 1px solid #665321;
+    border-radius: 999px;
+    color: var(--gold);
+    font-size: 0.75rem;
+}
+
+.private-status {
+    border-color: var(--border);
+    color: var(--text-secondary);
+}
+
+.project-content p {
+    min-height: 50px;
+    margin: 12px 0 0 46px;
+    color: var(--text-secondary);
+    font-size: 0.94rem;
+    line-height: 1.5;
+}
+
+.project-link {
+    cursor: pointer;
+}
+
+.project-card:nth-child(4) {
+    grid-column: 2 / span 5;
+}
+
+.project-card:nth-child(5) {
+    grid-column: 7 / span 5;
+}
+
+/* Contato */
+.contact-section {
+    position: relative;
+    overflow: hidden;
+    min-height: 720px;
+    padding: 92px 0 120px;
+}
+
+.contact-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.contact-label {
+    margin: 0 0 20px;
+    color: var(--gold);
+    font-size: 1rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+}
+
+.contact-title {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 4rem;
+    line-height: 1.12;
+    letter-spacing: -0.05em;
+}
+
+.contact-title span,
+.contact-text strong {
+    color: var(--gold);
+    font-weight: inherit;
+}
+
+.contact-line {
+    display: block;
+    width: 320px;
+    max-width: 70%;
+    height: 1px;
+    margin: 38px auto;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    box-shadow: 0 0 10px #b77a00;
+}
+
+.contact-text {
+    max-width: 780px;
+    margin: 0 auto 58px;
+    color: var(--text-secondary);
+    font-size: 1.35rem;
+    line-height: 1.6;
+}
+
+.social-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.social-card {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 28px 36px;
+    border: 1px solid #8a6517;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.35);
+    text-align: left;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.social-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-4px);
+}
+
+.social-icon {
+    width: 74px;
+    height: 74px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #f5cc67, #b77a00);
+    color: #101010;
+}
+
+.linkedin-icon {
+    display: grid;
+    place-items: center;
+    font-size: 3.2rem;
+    font-weight: bold;
+    letter-spacing: -0.08em;
+}
+
+.github-icon {
+    padding: 10px;
+    fill: currentColor;
+}
+
+.social-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.social-info strong {
+    font-size: 1.8rem;
+}
+
+.social-info span {
+    margin-top: 4px;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+}
+
+.social-arrow {
+    margin-left: auto;
+    color: var(--gold);
+    font-size: 2.7rem;
+    line-height: 1;
+}
+
+.contact-lines {
+    position: absolute;
+    bottom: -130px;
+    width: 43%;
+    height: 250px;
+    opacity: 0.65;
+}
+
+.contact-lines-left {
+    left: -60px;
+    transform: rotate(-12deg);
+}
+
+.contact-lines-right {
+    right: -60px;
+    transform: rotate(12deg);
+}
+
+.contact-lines span {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(217, 154, 0, 0.28);
+    border-top: 0;
+    border-radius: 0 0 50% 50%;
+}
+
+.contact-lines span:nth-child(2) {
+    width: 90%;
+    height: 86%;
+}
+
+.contact-lines span:nth-child(3) {
+    width: 80%;
+    height: 72%;
+}
+
+.contact-lines span:nth-child(4) {
+    width: 70%;
+    height: 58%;
+}
+
 /* Rodapé */
 .footer {
     padding: 18px;
@@ -511,6 +806,41 @@ a:focus-visible {
 
 .footer p {
     margin: 0;
+}
+
+/* Botão para retornar ao início */
+.back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 2;
+    padding: 12px 16px;
+    border: 1px solid var(--gold);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--gold);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.9rem;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px);
+    transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.back-to-top:hover {
+    background: #221b0b;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.back-to-top:focus-visible {
+    outline: 2px solid var(--text-primary);
+    outline-offset: 3px;
 }
 
 /* Responsividade */
@@ -542,6 +872,28 @@ a:focus-visible {
 
     .education-card {
         grid-column: 1 / -1;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-card,
+    .project-card:nth-child(4),
+    .project-card:nth-child(5) {
+        grid-column: auto;
+    }
+
+    .contact-title {
+        font-size: 3.4rem;
+    }
+
+    .social-links {
+        gap: 24px;
+    }
+
+    .social-card {
+        padding: 24px;
     }
 }
 
@@ -601,7 +953,8 @@ a:focus-visible {
     }
 
     .highlights,
-    .skills-grid {
+    .skills-grid,
+    .projects-grid {
         grid-template-columns: 1fr;
     }
 
@@ -622,6 +975,46 @@ a:focus-visible {
 
     .info-card {
         padding: 24px;
+    }
+
+    .projects-section {
+        padding: 64px 0;
+    }
+
+    .project-content p {
+        min-height: 0;
+    }
+
+    .contact-section {
+        min-height: auto;
+        padding: 72px 0 100px;
+    }
+
+    .contact-title {
+        font-size: 2.7rem;
+    }
+
+    .contact-text {
+        margin-bottom: 40px;
+        font-size: 1.1rem;
+    }
+
+    .social-links {
+        grid-template-columns: 1fr;
+    }
+
+    .social-card {
+        padding: 22px;
+    }
+
+    .contact-lines {
+        width: 65%;
+        height: 180px;
+    }
+
+    .back-to-top {
+        right: 16px;
+        bottom: 16px;
     }
 }
 
@@ -653,5 +1046,31 @@ a:focus-visible {
 
     .skills-section .page-title {
         font-size: 2.2rem;
+    }
+
+    .contact-label {
+        font-size: 0.8rem;
+        letter-spacing: 0.22em;
+    }
+
+    .contact-title {
+        font-size: 2.2rem;
+    }
+
+    .social-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .linkedin-icon {
+        font-size: 2.6rem;
+    }
+
+    .social-info strong {
+        font-size: 1.45rem;
+    }
+
+    .social-info span {
+        font-size: 0.88rem;
     }
 }
