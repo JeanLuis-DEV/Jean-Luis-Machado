@@ -16,10 +16,10 @@
         <nav class="container navigation" aria-label="Navegação principal">
             <a class="brand" href="index.html">Jean Luis</a>
 
-            <!-- As outras páginas serão ativadas nas próximas etapas -->
+            <!-- As próximas seções serão ativadas nas etapas seguintes -->
             <div class="menu">
-                <a class="active" href="index.html" aria-current="page">Início</a>
-                <span class="menu-item" aria-disabled="true">Sobre</span>
+                <a class="active" href="#inicio" aria-current="page">Início</a>
+                <a href="#sobre">Sobre</a>
                 <span class="menu-item" aria-disabled="true">Projetos</span>
                 <span class="menu-item" aria-disabled="true">Contato</span>
             </div>
@@ -28,7 +28,7 @@
 
     <main>
         <!-- Apresentação principal -->
-        <section class="hero">
+        <section class="hero" id="inicio">
             <div class="container hero-content">
                 <div class="profile-photo">
                     <img
@@ -42,6 +42,152 @@
                     <h1>Jean Luis<span>,</span></h1>
                     <span class="title-line"></span>
                     <p class="welcome">bem-vindo ao meu portfólio!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trajetória profissional -->
+        <section class="about-section" id="sobre">
+            <div class="container about-content">
+                <div class="about-decoration" aria-hidden="true">
+                    <span></span>
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <circle cx="32" cy="18" r="10"></circle>
+                        <path d="M14 52c0-10 8-18 18-18s18 8 18 18v3H14v-3Z"></path>
+                    </svg>
+                    <span></span>
+                </div>
+                <h2 class="page-title">Um pouco <span>sobre mim</span></h2>
+                <span class="about-title-line" aria-hidden="true"></span>
+
+                <div class="about-text">
+                    <p>
+                        Atuei por anos na área da elétrica, onde desenvolvi habilidades
+                        técnicas, organização e compromisso com a qualidade. Desde cedo,
+                        sempre fui apaixonado por tecnologia e, com o tempo, esse interesse
+                        se transformou no desejo de construir uma nova trajetória profissional
+                        nessa área.
+                    </p>
+                    <p>
+                        Atualmente estou sem vínculo trabalhista e dedicado aos estudos e à
+                        minha formação em tecnologia, incluindo o <strong>Residência Full Stack 5.0</strong>,
+                        ministrado gratuitamente pelo <strong>Instituto de Pesquisas Eldorado</strong>.
+                    </p>
+                </div>
+
+                <div class="highlights">
+                    <article class="highlight-card">
+                        <svg class="highlight-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                            <rect x="8" y="10" width="48" height="34" rx="2"></rect>
+                            <path d="M24 54h16M32 44v10M14 38h36"></path>
+                        </svg>
+                        <h3>Paixão por Tecnologia</h3>
+                        <p>Interesse genuíno por tecnologia desde muito cedo.</p>
+                    </article>
+
+                    <article class="highlight-card">
+                        <svg class="highlight-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                            <path d="m4 25 28-14 28 14-28 14L4 25Z"></path>
+                            <path d="M15 31v12c8 7 26 7 34 0V31M59 25v18M59 43l-3 8"></path>
+                        </svg>
+                        <h3>Em constante evolução</h3>
+                        <p>Estudos frequentes e dedicação ao desenvolvimento profissional.</p>
+                    </article>
+
+                    <article class="highlight-card">
+                        <svg class="highlight-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                            <circle cx="30" cy="34" r="22"></circle>
+                            <circle cx="30" cy="34" r="13"></circle>
+                            <circle cx="30" cy="34" r="4"></circle>
+                            <path d="m33 31 20-20M45 11h8v8"></path>
+                        </svg>
+                        <h3>Foco no futuro</h3>
+                        <p>Objetivo de conquistar novas oportunidades e construir uma carreira em tecnologia.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Competências e formação -->
+        <section class="skills-section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-label">Formação</p>
+                    <h2 class="page-title">Competências e <span>formação</span></h2>
+                    <p class="section-description">
+                        Desenvolvedor Back-end em formação, com foco em Java, lógica de
+                        programação e fundamentos de desenvolvimento.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="info-card technical-skills">
+                        <h3>Competências técnicas</h3>
+
+                        <div class="skill-item">
+                            <h4>Java</h4>
+                            <p>Fundamentos · POO</p>
+                        </div>
+                        <div class="skill-item">
+                            <h4>Algoritmos</h4>
+                            <p>Lógica · Estruturas</p>
+                        </div>
+                        <div class="skill-item">
+                            <h4>Back-end</h4>
+                            <p>Fundamentos · APIs</p>
+                        </div>
+                        <div class="skill-item">
+                            <h4>Programação orientada a objetos</h4>
+                            <p>Java · Boas práticas</p>
+                        </div>
+                        <div class="skill-item secondary-skill">
+                            <h4>Resolução de problemas</h4>
+                            <p>Análise · Raciocínio lógico</p>
+                        </div>
+                    </article>
+
+                    <article class="info-card certificate-card">
+                        <h3>Certificação</h3>
+                        <p class="certificate-acronym">SFPC</p>
+                        <p class="certificate-name">Scrum Foundation Professional Certificate</p>
+                        <p class="certificate-company">CertiProf</p>
+
+                        <div class="certificate-details">
+                            <p>Emitido: <strong>mar/2026</strong></p>
+                            <p>Validade: <strong>dez/2036</strong></p>
+                        </div>
+
+                        <span class="certificate-link" aria-label="Certificado sem link disponível">
+                            Ver certificado →
+                        </span>
+                    </article>
+
+                    <article class="info-card education-card">
+                        <h3>Formação</h3>
+                        <h4>Desenvolvedor Back-end em formação</h4>
+                        <p>Estudos independentes</p>
+                        <p>Desde jan/2026</p>
+
+                        <div class="education-block">
+                            <h4>Foco</h4>
+                            <ul>
+                                <li>Java</li>
+                                <li>Lógica de programação</li>
+                                <li>Fundamentos computacionais</li>
+                                <li>Desenvolvimento Back-end</li>
+                            </ul>
+                        </div>
+
+                        <div class="education-block courses">
+                            <h4>Cursos concluídos</h4>
+                            <p>3 cursos concluídos · 120h</p>
+                            <ul>
+                                <li>Java POO — 40h</li>
+                                <li>Java Básico — 40h</li>
+                                <li>Algoritmos e Lógica de Programação — 40h</li>
+                            </ul>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>

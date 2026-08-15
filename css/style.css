@@ -134,14 +134,14 @@ a:focus-visible {
     font-size: 2.5rem;
 }
 
-h1 {
+.hero h1 {
     margin: 8px 0 20px;
     font-size: 5.5rem;
     line-height: 0.95;
     letter-spacing: -0.07em;
 }
 
-h1 span {
+.hero h1 span {
     color: var(--gold);
 }
 
@@ -155,6 +155,287 @@ h1 span {
 
 .welcome {
     font-size: 2.3rem;
+}
+
+/* Página sobre */
+.about-section,
+.skills-section {
+    padding: 96px 0;
+}
+
+.about-content {
+    max-width: 940px;
+    text-align: center;
+}
+
+.about-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 12px;
+    color: var(--gold);
+}
+
+.about-decoration span {
+    width: 205px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold));
+}
+
+.about-decoration span:last-child {
+    background: linear-gradient(to left, transparent, var(--gold));
+}
+
+.about-decoration svg {
+    width: 44px;
+    height: 44px;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+}
+
+.section-label {
+    margin: 0 0 12px;
+    color: var(--gold);
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.page-title {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 3.3rem;
+    line-height: 1.1;
+    letter-spacing: -0.05em;
+}
+
+.page-title span {
+    color: var(--gold);
+}
+
+.about-title-line {
+    display: block;
+    width: 54px;
+    height: 2px;
+    margin: 18px auto 0;
+    background: var(--gold);
+}
+
+.about-text {
+    max-width: 780px;
+    margin: 34px auto 56px;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.75;
+}
+
+.about-text p {
+    margin: 0 0 24px;
+}
+
+.about-text strong {
+    color: var(--gold);
+    font-weight: normal;
+}
+
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+
+.highlight-card {
+    padding: 24px 32px;
+    border-left: 1px solid var(--border);
+}
+
+.highlight-card:first-child {
+    border-left: 0;
+}
+
+.highlight-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 18px;
+    color: var(--gold);
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+}
+
+.highlight-card h3 {
+    margin: 0 0 12px;
+    font-size: 1.1rem;
+}
+
+.highlight-card p:last-child {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Competências */
+.skills-section {
+    border-top: 1px solid var(--border);
+    background: #0b0b0b;
+}
+
+.section-heading {
+    max-width: 850px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.section-description {
+    max-width: 710px;
+    margin: 20px auto 0;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: stretch;
+}
+
+.info-card {
+    padding: 32px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--surface);
+}
+
+.info-card h3 {
+    margin: 0 0 28px;
+    font-size: 1.4rem;
+}
+
+.skill-item {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.skill-item h4,
+.skill-item p {
+    margin: 0;
+}
+
+.skill-item h4 {
+    font-size: 1rem;
+}
+
+.skill-item p,
+.education-card > p {
+    margin-top: 6px;
+    color: var(--text-secondary);
+}
+
+.secondary-skill {
+    border-bottom: 0;
+    color: #777777;
+}
+
+.secondary-skill p {
+    color: #777777;
+}
+
+.certificate-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.certificate-acronym {
+    margin: 18px 0 8px;
+    font-size: 2.6rem;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+}
+
+.certificate-name {
+    max-width: 280px;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    line-height: 1.35;
+}
+
+.certificate-company {
+    margin: 14px 0 30px;
+    color: var(--gold);
+    font-size: 1.1rem;
+}
+
+.certificate-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    color: var(--text-secondary);
+    text-align: left;
+}
+
+.certificate-details p {
+    margin: 0;
+    padding: 0 12px;
+}
+
+.certificate-details p + p {
+    border-left: 1px solid var(--border);
+}
+
+.certificate-details strong {
+    display: block;
+    margin-top: 5px;
+    color: var(--gold);
+    font-weight: normal;
+}
+
+.certificate-link {
+    margin-top: auto;
+    padding-top: 28px;
+    color: var(--gold);
+}
+
+.education-card > h4,
+.education-block h4 {
+    margin: 0;
+    color: var(--gold);
+    font-size: 1rem;
+}
+
+.education-card > p {
+    margin-bottom: 0;
+}
+
+.education-block {
+    margin-top: 26px;
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+}
+
+.education-block ul {
+    margin: 14px 0 0;
+    padding-left: 20px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.education-block li::marker {
+    color: var(--gold);
+}
+
+.courses p {
+    margin: 8px 0 0;
+    color: var(--text-secondary);
 }
 
 /* Rodapé */
@@ -185,12 +466,20 @@ h1 span {
         font-size: 2rem;
     }
 
-    h1 {
+    .hero h1 {
         font-size: 4.4rem;
     }
 
     .welcome {
         font-size: 1.9rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .education-card {
+        grid-column: 1 / -1;
     }
 }
 
@@ -227,6 +516,47 @@ h1 span {
         margin-right: auto;
         margin-left: auto;
     }
+
+    .about-section,
+    .skills-section {
+        padding: 64px 0;
+    }
+
+    .page-title {
+        font-size: 2.7rem;
+    }
+
+    .about-decoration {
+        gap: 18px;
+    }
+
+    .about-decoration span {
+        width: 100px;
+    }
+
+    .highlights,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .highlight-card,
+    .highlight-card:first-child {
+        padding: 24px 0;
+        border-top: 1px solid var(--border);
+        border-left: 0;
+    }
+
+    .highlight-card:last-child {
+        border-bottom: 1px solid var(--border);
+    }
+
+    .education-card {
+        grid-column: auto;
+    }
+
+    .info-card {
+        padding: 24px;
+    }
 }
 
 @media (max-width: 420px) {
@@ -243,11 +573,15 @@ h1 span {
         font-size: 1.65rem;
     }
 
-    h1 {
+    .hero h1 {
         font-size: 3.5rem;
     }
 
     .welcome {
         font-size: 1.6rem;
+    }
+
+    .page-title {
+        font-size: 2.2rem;
     }
 }
