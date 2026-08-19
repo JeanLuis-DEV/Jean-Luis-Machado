@@ -1,0 +1,233 @@
+/* Este arquivo estiliza os cartões de competências, certificação e formação. */
+.secao-competencias { /* Seleciona toda a área de competências e formação. */
+    padding: 40px 0; /* Cria espaço acima e abaixo do conteúdo. */
+    background: transparent; /* Permite que o fundo geral da página continue visível. */
+} /* Encerra os estilos da seção de competências. */
+
+.secao-competencias .titulo-secao { /* Seleciona o título principal desta seção. */
+    font-size: 3.1rem; /* Ajusta o tamanho do título para esta seção. */
+} /* Encerra o ajuste do título da seção. */
+
+.grade-competencias { /* Organiza os três cartões principais. */
+    display: grid; /* Usa uma grade para alinhar os cartões. */
+    grid-template-columns: repeat(3, 1fr); /* Cria três colunas com a mesma largura. */
+    gap: 24px; /* Cria espaço entre os cartões. */
+    align-items: stretch; /* Faz os cartões da mesma linha terem alturas iguais. */
+} /* Encerra os estilos da grade de competências. */
+
+.cartao-informacao { /* Estiliza cada cartão de informações. */
+    padding: 20px; /* Cria espaço entre a borda e o conteúdo do cartão. */
+    border: 1px solid var(--cor-borda); /* Desenha uma borda cinza discreta. */
+    border-radius: 16px; /* Arredonda os cantos do cartão. */
+    background: var(--cor-superficie); /* Aplica um fundo levemente mais claro que o da página. */
+} /* Encerra os estilos dos cartões de informações. */
+
+.cartao-informacao h3 { /* Seleciona os títulos de terceiro nível dentro dos cartões. */
+    margin: 0 0 28px; /* Remove espaços extras e cria distância abaixo do título. */
+    font-size: 1.25rem; /* Deixa o título maior que os textos comuns. */
+} /* Encerra os estilos dos títulos dos cartões. */
+
+.cabecalho-cartao { /* Organiza o ícone e o título no topo de cada cartão. */
+    display: flex; /* Coloca o ícone e o título lado a lado. */
+    align-items: flex-start; /* Alinha os elementos pelo topo. */
+    gap: 16px; /* Cria espaço entre o ícone e o título. */
+    margin-bottom: 16px; /* Separa o cabeçalho do restante do cartão. */
+} /* Encerra os estilos do cabeçalho dos cartões. */
+
+.cabecalho-cartao h3 { /* Seleciona o título que fica ao lado do ícone. */
+    margin: 3px 0 0; /* Alinha visualmente o texto com a parte superior do ícone. */
+} /* Encerra o ajuste do título no cabeçalho do cartão. */
+
+.icone-cartao { /* Estiliza o ícone principal de cada cartão. */
+    width: 36px; /* Define a largura do ícone. */
+    height: 36px; /* Define a altura do ícone. */
+    flex-shrink: 0; /* Impede que o ícone seja espremido. */
+    color: var(--cor-destaque); /* Define dourado como cor do ícone. */
+    stroke: currentColor; /* Aplica o dourado às linhas do desenho. */
+    stroke-linecap: round; /* Arredonda as pontas das linhas. */
+    stroke-linejoin: round; /* Arredonda os encontros das linhas. */
+    stroke-width: 2; /* Define a espessura das linhas do ícone. */
+} /* Encerra os estilos do ícone principal dos cartões. */
+
+.linha-titulo-cartao { /* Cria a pequena linha dourada abaixo do título do cartão. */
+    display: block; /* Permite controlar largura, altura e margens. */
+    width: 50px; /* Define o comprimento da linha. */
+    height: 2px; /* Define a espessura da linha. */
+    margin-top: 12px; /* Separa a linha do título. */
+    background: var(--cor-destaque); /* Deixa a linha dourada. */
+} /* Encerra os estilos da linha do título do cartão. */
+
+.item-competencia { /* Organiza cada competência dentro do primeiro cartão. */
+    display: flex; /* Coloca o ícone e os textos lado a lado. */
+    align-items: center; /* Centraliza o ícone em relação aos textos. */
+    gap: 16px; /* Cria espaço entre o ícone e os textos. */
+    padding: 8px 0; /* Cria espaço acima e abaixo de cada item. */
+    border-bottom: 1px solid var(--cor-borda); /* Desenha uma linha para separar os itens. */
+} /* Encerra os estilos de cada item de competência. */
+
+.icone-competencia { /* Estiliza o ícone de cada competência. */
+    width: 36px; /* Define a largura do ícone. */
+    height: 36px; /* Define a altura do ícone. */
+    flex-shrink: 0; /* Impede que o ícone seja espremido. */
+    color: var(--cor-destaque); /* Define dourado como cor do ícone. */
+    stroke: currentColor; /* Aplica a cor atual às linhas do desenho. */
+    stroke-linecap: round; /* Arredonda as pontas das linhas. */
+    stroke-linejoin: round; /* Arredonda os encontros das linhas. */
+    stroke-width: 2; /* Define a espessura das linhas do ícone. */
+} /* Encerra os estilos dos ícones das competências. */
+
+.item-competencia h4, .item-competencia p { /* Seleciona o nome e a descrição de cada competência. */
+    margin: 0; /* Remove os espaços automáticos desses textos. */
+} /* Encerra o ajuste dos textos de cada competência. */
+
+.item-competencia h4 { /* Seleciona somente o nome da competência. */
+    font-size: 1rem; /* Mantém o nome no tamanho normal de leitura. */
+} /* Encerra os estilos do nome da competência. */
+
+.item-competencia p { /* Seleciona somente a descrição da competência. */
+    margin-top: 6px; /* Cria um pequeno espaço abaixo do nome. */
+    color: var(--cor-texto-secundario); /* Deixa a descrição em cinza. */
+} /* Encerra os estilos da descrição da competência. */
+
+.competencia-secundaria { /* Seleciona a competência exibida com menor destaque. */
+    border-bottom: 0; /* Remove a linha abaixo do último item. */
+    color: #777777; /* Deixa o texto principal em cinza escuro. */
+} /* Encerra os estilos da competência secundária. */
+
+.competencia-secundaria p, .competencia-secundaria .icone-competencia { /* Seleciona a descrição e o ícone do item secundário. */
+    color: #777777; /* Mantém descrição e ícone com menor destaque. */
+} /* Encerra o ajuste visual da competência secundária. */
+
+.cartao-certificacao { /* Seleciona o cartão que mostra a certificação. */
+    display: flex; /* Usa alinhamento flexível dentro do cartão. */
+    flex-direction: column; /* Empilha os elementos verticalmente. */
+    text-align: center; /* Centraliza as informações da certificação. */
+} /* Encerra os estilos do cartão de certificação. */
+
+.cartao-certificacao .cabecalho-cartao { /* Seleciona o cabeçalho do cartão de certificação. */
+    text-align: left; /* Mantém o título do cabeçalho alinhado à esquerda. */
+} /* Encerra o ajuste do cabeçalho da certificação. */
+
+.sigla-certificacao { /* Seleciona a sigla SFPC. */
+    margin: 4px 0; /* Cria um pequeno espaço acima e abaixo da sigla. */
+    font-size: 2.1rem; /* Deixa a sigla em tamanho grande. */
+    font-weight: bold; /* Deixa a sigla em negrito. */
+    letter-spacing: 0.02em; /* Afasta levemente as letras da sigla. */
+} /* Encerra os estilos da sigla da certificação. */
+
+.nome-certificacao { /* Seleciona o nome completo da certificação. */
+    max-width: 280px; /* Limita a largura para o texto quebrar de forma equilibrada. */
+    margin: 0 auto; /* Centraliza o nome dentro do cartão. */
+    font-size: 1.1rem; /* Deixa o nome um pouco maior que o texto comum. */
+    line-height: 1.35; /* Ajusta a distância entre as linhas do nome. */
+} /* Encerra os estilos do nome da certificação. */
+
+.empresa-certificacao { /* Seleciona o nome da empresa que emitiu a certificação. */
+    margin: 8px 0 14px; /* Cria espaço acima e abaixo do nome da empresa. */
+    color: var(--cor-destaque); /* Deixa o nome da empresa dourado. */
+    font-size: 1.1rem; /* Deixa o texto um pouco maior que o padrão. */
+} /* Encerra os estilos da empresa certificadora. */
+
+.detalhes-certificacao { /* Organiza as datas de emissão e validade. */
+    display: grid; /* Usa uma grade para alinhar as duas datas. */
+    grid-template-columns: repeat(2, 1fr); /* Cria duas colunas com a mesma largura. */
+    padding: 12px 0; /* Cria espaço acima e abaixo das datas. */
+    border-top: 1px solid var(--cor-borda); /* Desenha uma linha acima das datas. */
+    border-bottom: 1px solid var(--cor-borda); /* Desenha uma linha abaixo das datas. */
+    color: var(--cor-texto-secundario); /* Deixa os rótulos das datas em cinza. */
+    text-align: left; /* Alinha o texto das datas à esquerda. */
+} /* Encerra os estilos dos detalhes da certificação. */
+
+.detalhes-certificacao p { /* Seleciona cada bloco de data. */
+    margin: 0; /* Remove os espaços automáticos dos parágrafos. */
+    padding: 0 12px; /* Cria espaço nas laterais de cada data. */
+} /* Encerra os estilos dos blocos de data. */
+
+.icone-calendario { /* Estiliza o pequeno calendário ao lado de cada data. */
+    width: 22px; /* Define a largura do ícone. */
+    height: 22px; /* Define a altura do ícone. */
+    margin-right: 5px; /* Separa o ícone do texto. */
+    color: var(--cor-destaque); /* Define dourado como cor do ícone. */
+    vertical-align: middle; /* Alinha o ícone ao meio da linha de texto. */
+    stroke: currentColor; /* Aplica o dourado às linhas do calendário. */
+    stroke-linecap: round; /* Arredonda as pontas das linhas. */
+    stroke-linejoin: round; /* Arredonda os encontros das linhas. */
+    stroke-width: 2; /* Define a espessura das linhas do calendário. */
+} /* Encerra os estilos do ícone de calendário. */
+
+.detalhes-certificacao p + p { /* Seleciona somente a segunda data. */
+    border-left: 1px solid var(--cor-borda); /* Desenha uma linha vertical entre as duas datas. */
+} /* Encerra o ajuste da segunda data. */
+
+.detalhes-certificacao strong { /* Seleciona os valores das datas. */
+    display: block; /* Coloca o valor em uma linha abaixo do rótulo. */
+    margin-top: 5px; /* Cria espaço entre o rótulo e o valor. */
+    color: var(--cor-destaque); /* Deixa o valor da data dourado. */
+    font-weight: normal; /* Mantém o valor sem negrito. */
+} /* Encerra os estilos dos valores das datas. */
+
+.cartao-formacao > h4, .bloco-formacao h4 { /* Seleciona os subtítulos do cartão de formação. */
+    margin: 0; /* Remove os espaços automáticos dos subtítulos. */
+    color: var(--cor-destaque); /* Deixa os subtítulos dourados. */
+    font-size: 1rem; /* Mantém os subtítulos no tamanho normal de leitura. */
+} /* Encerra os estilos dos subtítulos da formação. */
+
+.bloco-formacao { /* Separa cada grupo de informações da formação. */
+    margin-top: 14px; /* Cria espaço acima do grupo. */
+    padding-top: 14px; /* Cria espaço entre a linha e o conteúdo do grupo. */
+    border-top: 1px solid var(--cor-borda); /* Desenha uma linha acima de cada grupo. */
+} /* Encerra os estilos dos blocos de formação. */
+
+.bloco-formacao ul { /* Seleciona as listas do cartão de formação. */
+    margin: 10px 0 0; /* Cria espaço acima da lista e remove os demais. */
+    padding-left: 20px; /* Abre espaço à esquerda para os marcadores. */
+    color: var(--cor-texto-secundario); /* Deixa os itens da lista em cinza. */
+    line-height: 1.55; /* Aumenta a distância entre os itens. */
+} /* Encerra os estilos das listas de formação. */
+
+.bloco-formacao li::marker { /* Seleciona os marcadores que aparecem antes dos itens. */
+    color: var(--cor-destaque); /* Deixa os marcadores das listas dourados. */
+} /* Encerra os estilos dos marcadores das listas. */
+
+.cursos-concluidos p { /* Seleciona o resumo da quantidade de cursos e horas. */
+    margin: 8px 0 0; /* Cria espaço acima do resumo. */
+    color: var(--cor-texto-secundario); /* Deixa o resumo em cinza. */
+} /* Encerra os estilos do resumo dos cursos. */
+
+@media (max-width: 900px) { /* Aplica os ajustes abaixo em tablets e telas médias. */
+    .grade-competencias { /* Reorganiza os cartões em telas médias. */
+        grid-template-columns: repeat(2, 1fr); /* Mostra dois cartões por linha. */
+    } /* Encerra o ajuste da grade em telas médias. */
+
+    .cartao-formacao { /* Ajusta o cartão de formação quando existem duas colunas. */
+        grid-column: 1 / -1; /* Faz o cartão ocupar toda a largura da linha. */
+    } /* Encerra o ajuste do cartão de formação. */
+} /* Encerra os ajustes para telas de até 900 pixels. */
+
+@media (max-width: 720px) { /* Aplica os ajustes abaixo em telas pequenas. */
+    .secao-competencias { /* Ajusta o espaço da seção em telas pequenas. */
+        padding: 64px 0; /* Aumenta o espaço acima e abaixo do conteúdo. */
+    } /* Encerra o ajuste da seção de competências. */
+
+    .secao-competencias .titulo-secao { /* Ajusta o título da seção em telas pequenas. */
+        font-size: 2.7rem; /* Reduz o tamanho do título. */
+    } /* Encerra o ajuste do título. */
+
+    .grade-competencias { /* Reorganiza a grade em telas pequenas. */
+        grid-template-columns: 1fr; /* Coloca um cartão por linha. */
+    } /* Encerra o ajuste da grade em telas pequenas. */
+
+    .cartao-formacao { /* Ajusta o cartão de formação no layout de uma coluna. */
+        grid-column: auto; /* Devolve ao cartão a ocupação normal de uma coluna. */
+    } /* Encerra o ajuste do cartão de formação. */
+
+    .cartao-informacao { /* Ajusta o espaço interno dos cartões em telas pequenas. */
+        padding: 24px; /* Aumenta o preenchimento para dar mais conforto visual. */
+    } /* Encerra o ajuste dos cartões em telas pequenas. */
+} /* Encerra os ajustes para telas de até 720 pixels. */
+
+@media (max-width: 420px) { /* Aplica os ajustes abaixo em celulares estreitos. */
+    .secao-competencias .titulo-secao { /* Ajusta o título em celulares estreitos. */
+        font-size: 2.2rem; /* Reduz o título para ele caber na tela. */
+    } /* Encerra o ajuste do título em celulares estreitos. */
+} /* Encerra os ajustes para telas de até 420 pixels. */

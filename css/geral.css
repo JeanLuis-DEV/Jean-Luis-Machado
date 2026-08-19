@@ -1,0 +1,83 @@
+/* Este arquivo guarda os estilos usados em várias partes da página. */
+:root { /* Cria variáveis de cores para evitar repetir os mesmos valores. */
+    --cor-fundo: #080808; /* Define o preto usado no fundo principal da página. */
+    --cor-superficie: #101010; /* Define o preto mais claro usado dentro dos cartões. */
+    --cor-borda: #282828; /* Define o cinza escuro usado nas bordas e divisórias. */
+    --cor-texto-principal: #f5f5f5; /* Define o branco usado nos títulos e textos importantes. */
+    --cor-texto-secundario: #a5a5a5; /* Define o cinza usado nos textos de apoio. */
+    --cor-destaque: #d99a00; /* Define o dourado usado para chamar atenção. */
+} /* Encerra a lista de variáveis de cores. */
+
+* { /* Seleciona todos os elementos da página. */
+    box-sizing: border-box; /* Faz largura e altura incluírem preenchimentos e bordas. */
+} /* Encerra a configuração aplicada a todos os elementos. */
+
+html { /* Seleciona a estrutura principal do documento. */
+    background: var(--cor-fundo); /* Mantém o fundo escuro mesmo fora da área do conteúdo. */
+} /* Encerra os estilos da estrutura principal. */
+
+body { /* Seleciona todo o conteúdo visível da página. */
+    min-width: 320px; /* Impede que o layout fique menor que uma tela de celular estreita. */
+    margin: 0; /* Remove o espaço padrão que o navegador coloca ao redor da página. */
+    background: radial-gradient(circle at 10% 48%, #111111 0%, var(--cor-fundo) 28%); /* Cria uma iluminação discreta sobre o fundo preto. */
+    color: var(--cor-texto-principal); /* Define o branco como cor inicial dos textos. */
+    font-family: Arial, Helvetica, sans-serif; /* Usa fontes simples e disponíveis na maioria dos aparelhos. */
+} /* Encerra os estilos gerais do conteúdo da página. */
+
+a { /* Seleciona todos os links da página. */
+    color: inherit; /* Faz cada link usar a mesma cor do elemento ao seu redor. */
+    text-decoration: none; /* Remove o sublinhado padrão dos links. */
+} /* Encerra os estilos gerais dos links. */
+
+a:focus-visible { /* Seleciona um link quando ele recebe foco pelo teclado. */
+    outline: 2px solid var(--cor-destaque); /* Desenha um contorno dourado para indicar o foco. */
+    outline-offset: 5px; /* Afasta o contorno para ele não encostar no link. */
+} /* Encerra os estilos de foco dos links. */
+
+.conteudo-centralizado { /* Limita e centraliza o conteúdo principal de cada seção. */
+    width: 90%; /* Faz o conteúdo ocupar noventa por cento da largura disponível. */
+    max-width: 1200px; /* Impede que o conteúdo fique largo demais em telas grandes. */
+    margin: 0 auto; /* Centraliza o bloco horizontalmente. */
+} /* Encerra os estilos do conteúdo centralizado. */
+
+.titulo-secao { /* Estiliza os títulos principais das seções. */
+    margin: 0; /* Remove os espaços externos automáticos do título. */
+    color: var(--cor-texto-principal); /* Mantém a parte principal do título branca. */
+    font-size: 3.3rem; /* Define um tamanho grande para destacar o título. */
+    line-height: 1.1; /* Aproxima as linhas quando o título quebra. */
+    letter-spacing: -0.05em; /* Aproxima levemente as letras do título. */
+} /* Encerra os estilos dos títulos das seções. */
+
+.titulo-secao span { /* Seleciona a parte destacada dentro do título da seção. */
+    color: var(--cor-destaque); /* Aplica a cor dourada ao trecho destacado. */
+} /* Encerra o destaque dos títulos. */
+
+.cabecalho-secao { /* Organiza o título e a descrição no início de uma seção. */
+    max-width: 850px; /* Limita a largura para facilitar a leitura. */
+    margin: 0 auto 24px; /* Centraliza o bloco e cria espaço abaixo dele. */
+    text-align: center; /* Centraliza o título e a descrição. */
+} /* Encerra os estilos do cabeçalho das seções. */
+
+.descricao-secao { /* Estiliza o texto explicativo abaixo de um título de seção. */
+    max-width: 710px; /* Limita o comprimento das linhas do texto. */
+    margin: 14px auto 0; /* Centraliza a descrição e cria espaço acima dela. */
+    color: var(--cor-texto-secundario); /* Usa cinza para diferenciar a descrição do título. */
+    font-size: 1rem; /* Mantém o texto no tamanho normal de leitura. */
+    line-height: 1.5; /* Aumenta a distância entre linhas para melhorar a leitura. */
+} /* Encerra os estilos das descrições das seções. */
+
+@media (max-width: 720px) { /* Aplica os ajustes abaixo em celulares e tablets pequenos. */
+    .titulo-secao { /* Ajusta os títulos das seções em telas menores. */
+        font-size: 2.7rem; /* Reduz o tamanho do título para caber melhor. */
+    } /* Encerra o ajuste do título em telas menores. */
+} /* Encerra os ajustes para telas de até 720 pixels. */
+
+@media (max-width: 420px) { /* Aplica os ajustes abaixo em celulares muito estreitos. */
+    .conteudo-centralizado { /* Ajusta a largura do conteúdo em celulares estreitos. */
+        width: 88%; /* Aumenta um pouco as margens laterais para o conteúdo respirar. */
+    } /* Encerra o ajuste do conteúdo centralizado. */
+
+    .titulo-secao { /* Ajusta novamente os títulos em telas muito estreitas. */
+        font-size: 2.2rem; /* Reduz mais o título para evitar cortes. */
+    } /* Encerra o ajuste do título em celulares estreitos. */
+} /* Encerra os ajustes para telas de até 420 pixels. */

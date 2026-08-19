@@ -8,15 +8,23 @@
         content="Portfólio de Jean Luis, desenvolvedor Back-end em formação."
     >
     <title>Jean Luis | Portfólio</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <!-- O CSS geral vem primeiro. Depois, cada arquivo cuida de uma seção da página. -->
+    <link rel="stylesheet" href="css/geral.css">
+    <link rel="stylesheet" href="css/cabecalho.css">
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/sobre.css">
+    <link rel="stylesheet" href="css/competencias.css">
+    <link rel="stylesheet" href="css/projetos.css">
+    <link rel="stylesheet" href="css/contato.css">
+    <link rel="stylesheet" href="css/rodape.css">
 </head>
 <body>
-    <!-- Cabeçalho principal -->
-    <header class="header">
-        <nav class="container navigation navigation-no-brand" aria-label="Navegação principal">
-            <!-- As próximas seções serão ativadas nas etapas seguintes -->
-            <div class="menu">
-                <a class="active" href="#inicio" aria-current="page">Início</a>
+    <!-- Cabeçalho com os links que levam o visitante para cada seção. -->
+    <header class="cabecalho-principal">
+        <nav class="conteudo-centralizado navegacao-principal" aria-label="Navegação principal">
+            <div class="menu-principal">
+                <a class="ativo" href="#inicio" aria-current="page">Início</a>
                 <a href="#sobre">Sobre</a>
                 <a href="#projetos">Projetos</a>
                 <a href="#contato">Contato</a>
@@ -25,29 +33,29 @@
     </header>
 
     <main>
-        <!-- Apresentação principal -->
-        <section class="hero" id="inicio">
-            <div class="container hero-content">
-                <div class="profile-photo">
+        <!-- Primeira seção: apresenta a foto, o nome e a mensagem de boas-vindas. -->
+        <section class="secao-inicio" id="inicio">
+            <div class="conteudo-centralizado conteudo-inicio">
+                <div class="foto-perfil">
                     <img
                         src="assets/images/foto-principal.png"
                         alt="Jean Luis Machado vestindo blazer escuro"
                     >
                 </div>
 
-                <div class="hero-text">
-                    <p class="greeting">Olá, meu nome é</p>
+                <div class="texto-apresentacao">
+                    <p class="saudacao">Olá, meu nome é</p>
                     <h1>Jean Luis<span>,</span></h1>
-                    <span class="title-line"></span>
-                    <p class="welcome">bem-vindo ao meu portfólio!</p>
+                    <span class="linha-apresentacao" aria-hidden="true"></span>
+                    <p class="mensagem-boas-vindas">bem-vindo ao meu portfólio!</p>
                 </div>
             </div>
         </section>
 
-        <!-- Trajetória profissional -->
-        <section class="about-section" id="sobre">
-            <div class="container about-content">
-                <div class="about-decoration" aria-hidden="true">
+        <!-- Seção Sobre: resume a trajetória e os objetivos profissionais. -->
+        <section class="secao-sobre" id="sobre">
+            <div class="conteudo-centralizado conteudo-sobre">
+                <div class="decoracao-sobre" aria-hidden="true">
                     <span></span>
                     <svg viewBox="0 0 64 64" fill="none">
                         <circle cx="32" cy="18" r="10"></circle>
@@ -55,10 +63,11 @@
                     </svg>
                     <span></span>
                 </div>
-                <h2 class="page-title">Um pouco <span>sobre mim</span></h2>
-                <span class="about-title-line" aria-hidden="true"></span>
 
-                <div class="about-text">
+                <h2 class="titulo-secao">Um pouco <span>sobre mim</span></h2>
+                <span class="linha-titulo-sobre" aria-hidden="true"></span>
+
+                <div class="texto-sobre">
                     <p>
                         Atuei por anos na área da elétrica, onde desenvolvi habilidades
                         técnicas, organização e compromisso com a qualidade. Desde cedo,
@@ -73,9 +82,9 @@
                     </p>
                 </div>
 
-                <div class="highlights">
-                    <article class="highlight-card">
-                        <svg class="highlight-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                <div class="lista-destaques">
+                    <article class="cartao-destaque">
+                        <svg class="icone-destaque" viewBox="0 0 64 64" fill="none" aria-hidden="true">
                             <rect x="8" y="10" width="48" height="34" rx="2"></rect>
                             <path d="M24 54h16M32 44v10M14 38h36"></path>
                         </svg>
@@ -83,8 +92,8 @@
                         <p>Interesse genuíno por tecnologia desde muito cedo.</p>
                     </article>
 
-                    <article class="highlight-card">
-                        <svg class="highlight-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                    <article class="cartao-destaque">
+                        <svg class="icone-destaque" viewBox="0 0 64 64" fill="none" aria-hidden="true">
                             <path d="m4 25 28-14 28 14-28 14L4 25Z"></path>
                             <path d="M15 31v12c8 7 26 7 34 0V31M59 25v18M59 43l-3 8"></path>
                         </svg>
@@ -92,8 +101,8 @@
                         <p>Estudos frequentes e dedicação ao desenvolvimento profissional.</p>
                     </article>
 
-                    <article class="highlight-card">
-                        <svg class="highlight-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                    <article class="cartao-destaque">
+                        <svg class="icone-destaque" viewBox="0 0 64 64" fill="none" aria-hidden="true">
                             <circle cx="30" cy="34" r="22"></circle>
                             <circle cx="30" cy="34" r="13"></circle>
                             <circle cx="30" cy="34" r="4"></circle>
@@ -106,38 +115,39 @@
             </div>
         </section>
 
-        <!-- Competências e formação -->
-        <section class="skills-section" id="competencias">
-            <div class="container">
-                <div class="section-heading">
-                    <h2 class="page-title">Competências e <span>formação</span></h2>
-                    <p class="section-description">
+        <!-- Seção Competências: apresenta conhecimentos, certificação e formação. -->
+        <section class="secao-competencias" id="competencias">
+            <div class="conteudo-centralizado">
+                <div class="cabecalho-secao">
+                    <h2 class="titulo-secao">Competências e <span>formação</span></h2>
+                    <p class="descricao-secao">
                         Desenvolvedor Back-end em formação, com foco em Java, lógica de
                         programação e fundamentos de desenvolvimento.
                     </p>
                 </div>
 
-                <div class="skills-grid">
-                    <article class="info-card technical-skills">
-                        <div class="card-header">
-                            <svg class="card-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                <div class="grade-competencias">
+                    <article class="cartao-informacao">
+                        <div class="cabecalho-cartao">
+                            <svg class="icone-cartao" viewBox="0 0 64 64" fill="none" aria-hidden="true">
                                 <rect x="8" y="10" width="48" height="38" rx="4"></rect>
                                 <path d="m23 24-8 7 8 7M41 24l8 7-8 7M36 20l-8 23"></path>
                             </svg>
                             <div>
                                 <h3>Competências técnicas</h3>
-                                <span class="card-title-line" aria-hidden="true"></span>
+                                <span class="linha-titulo-cartao" aria-hidden="true"></span>
                             </div>
                         </div>
 
-                        <div class="skill-item">
-                            <svg class="skill-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                        <div class="item-competencia">
+                            <svg class="icone-competencia" viewBox="0 0 64 64" fill="none" aria-hidden="true">
                                 <path d="M25 10c9 8-8 13 4 22 10 8 2 13-4 17M36 17c9 8-8 13 4 22M19 48c8 5 21 5 29 0M13 55c11 7 28 7 39 0"></path>
                             </svg>
                             <div><h4>Java</h4><p>Fundamentos · POO</p></div>
                         </div>
-                        <div class="skill-item">
-                            <svg class="skill-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+
+                        <div class="item-competencia">
+                            <svg class="icone-competencia" viewBox="0 0 64 64" fill="none" aria-hidden="true">
                                 <rect x="24" y="7" width="16" height="13" rx="2"></rect>
                                 <rect x="7" y="44" width="16" height="13" rx="2"></rect>
                                 <rect x="41" y="44" width="16" height="13" rx="2"></rect>
@@ -145,70 +155,75 @@
                             </svg>
                             <div><h4>Algoritmos</h4><p>Lógica · Estruturas</p></div>
                         </div>
-                        <div class="skill-item">
-                            <svg class="skill-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+
+                        <div class="item-competencia">
+                            <svg class="icone-competencia" viewBox="0 0 64 64" fill="none" aria-hidden="true">
                                 <rect x="9" y="8" width="46" height="16" rx="3"></rect>
                                 <rect x="9" y="40" width="46" height="16" rx="3"></rect>
                                 <path d="M18 16h1M18 48h1M28 16h19M28 48h19"></path>
                             </svg>
                             <div><h4>Back-end</h4><p>Fundamentos · APIs</p></div>
                         </div>
-                        <div class="skill-item">
-                            <svg class="skill-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+
+                        <div class="item-competencia">
+                            <svg class="icone-competencia" viewBox="0 0 64 64" fill="none" aria-hidden="true">
                                 <path d="m32 6 22 13v26L32 58 10 45V19L32 6Z"></path>
                                 <path d="m10 19 22 13 22-13M32 32v26"></path>
                             </svg>
                             <div><h4>Programação orientada a objetos</h4><p>Java · Boas práticas</p></div>
                         </div>
-                        <div class="skill-item secondary-skill">
-                            <svg class="skill-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+
+                        <div class="item-competencia competencia-secundaria">
+                            <svg class="icone-competencia" viewBox="0 0 64 64" fill="none" aria-hidden="true">
                                 <path d="M25 8h14v11c5 1 9 5 9 10s-4 9-9 10v8H25v-8c-5-1-9-5-9-10s4-9 9-10V8ZM25 25h-7v8h7M39 25h7v8h-7M29 47v9h6v-9"></path>
                             </svg>
                             <div><h4>Resolução de problemas</h4><p>Análise · Raciocínio lógico</p></div>
                         </div>
                     </article>
 
-                    <article class="info-card certificate-card">
-                        <div class="card-header">
-                            <svg class="card-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                    <article class="cartao-informacao cartao-certificacao">
+                        <div class="cabecalho-cartao">
+                            <svg class="icone-cartao" viewBox="0 0 64 64" fill="none" aria-hidden="true">
                                 <path d="m32 6 20 8v15c0 13-8 22-20 28C20 51 12 42 12 29V14l20-8Z"></path>
                                 <path d="m32 20 3 7 8 1-6 5 2 8-7-4-7 4 2-8-6-5 8-1 3-7Z"></path>
                             </svg>
                             <div>
                                 <h3>Certificação</h3>
-                                <span class="card-title-line" aria-hidden="true"></span>
+                                <span class="linha-titulo-cartao" aria-hidden="true"></span>
                             </div>
                         </div>
-                        <p class="certificate-acronym">SFPC</p>
-                        <p class="certificate-name">Scrum Foundation Professional Certificate</p>
-                        <p class="certificate-company">CertiProf</p>
 
-                        <div class="certificate-details">
+                        <p class="sigla-certificacao">SFPC</p>
+                        <p class="nome-certificacao">Scrum Foundation Professional Certificate</p>
+                        <p class="empresa-certificacao">CertiProf</p>
+
+                        <div class="detalhes-certificacao">
                             <p>
-                                <svg class="calendar-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="4" y="7" width="24" height="21" rx="2"></rect><path d="M4 13h24M10 4v6M22 4v6M10 19h1M16 19h1M22 19h1"></path></svg>
+                                <svg class="icone-calendario" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="4" y="7" width="24" height="21" rx="2"></rect><path d="M4 13h24M10 4v6M22 4v6M10 19h1M16 19h1M22 19h1"></path></svg>
                                 Emitido: <strong>mar/2026</strong>
                             </p>
                             <p>
-                                <svg class="calendar-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="4" y="7" width="24" height="21" rx="2"></rect><path d="M4 13h24M10 4v6M22 4v6M10 19h1M16 19h1M22 19h1"></path></svg>
+                                <svg class="icone-calendario" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="4" y="7" width="24" height="21" rx="2"></rect><path d="M4 13h24M10 4v6M22 4v6M10 19h1M16 19h1M22 19h1"></path></svg>
                                 Validade: <strong>dez/2036</strong>
                             </p>
                         </div>
                     </article>
 
-                    <article class="info-card education-card">
-                        <div class="card-header">
-                            <svg class="card-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                    <article class="cartao-informacao cartao-formacao">
+                        <div class="cabecalho-cartao">
+                            <svg class="icone-cartao" viewBox="0 0 64 64" fill="none" aria-hidden="true">
                                 <path d="m4 25 28-14 28 14-28 14L4 25Z"></path>
                                 <path d="M15 31v12c8 7 26 7 34 0V31M59 25v18M59 43l-3 8"></path>
                             </svg>
                             <div>
                                 <h3>Formação</h3>
-                                <span class="card-title-line" aria-hidden="true"></span>
+                                <span class="linha-titulo-cartao" aria-hidden="true"></span>
                             </div>
                         </div>
+
                         <h4>Desenvolvedor Back-end em formação</h4>
 
-                        <div class="education-block">
+                        <div class="bloco-formacao">
                             <h4>Foco</h4>
                             <ul>
                                 <li>Java</li>
@@ -218,7 +233,7 @@
                             </ul>
                         </div>
 
-                        <div class="education-block courses">
+                        <div class="bloco-formacao cursos-concluidos">
                             <h4>Cursos concluídos</h4>
                             <p>3 cursos concluídos · 120h</p>
                             <ul>
@@ -232,188 +247,187 @@
             </div>
         </section>
 
-        <!-- Projetos desenvolvidos -->
-        <section class="projects-section" id="projetos">
-            <div class="container">
-                <div class="section-heading projects-heading">
-                    <h2 class="page-title">Meus <span>projetos</span></h2>
-                    <span class="projects-title-line" aria-hidden="true"></span>
-                    <p class="section-description">
-                        Alguns projetos públicos e privados que representam minha evolução
-                        prática no desenvolvimento de software.
-                    </p>
+        <!-- Seção Projetos: cada cartão abre o respectivo repositório no GitHub. -->
+        <section class="secao-projetos" id="projetos">
+            <div class="conteudo-centralizado">
+                <div class="cabecalho-secao cabecalho-projetos">
+                    <h2 class="titulo-secao">Meus <span>projetos</span></h2>
+                    <span class="linha-titulo-projetos" aria-hidden="true"></span>
                 </div>
 
-                <div class="projects-grid">
+                <div class="grade-projetos">
                     <a
-                        class="project-card project-link"
+                        class="cartao-projeto"
                         href="https://github.com/JeanLuis-DEV/app-barato"
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label="Ver App Barato no GitHub"
+                        aria-label="Abrir o projeto App Barato no GitHub"
                     >
-                        <img src="assets/images/app-barato.png" alt="Tela do projeto App Barato">
-                        <div class="project-content">
-                            <div class="project-title">
-                                <div class="project-name">
-                                    <svg class="project-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="m32 6 22 13v26L32 58 10 45V19L32 6Z"></path><path d="m10 19 22 13 22-13M32 32v26"></path></svg>
-                                    <h3>App Barato</h3>
-                                </div>
-                                <span class="project-status">Público</span>
-                            </div>
-                            <p>
-                                Compara produtos com preços e quantidades diferentes para mostrar
-                                qual opção oferece o melhor custo-benefício.
-                            </p>
+                        <div class="area-visual-projeto" aria-hidden="true">
+                            <img class="fundo-projeto" src="assets/images/app-barato.png" alt="">
+                            <svg class="icone-projeto" viewBox="0 0 64 64" fill="none">
+                                <path d="m32 6 22 13v26L32 58 10 45V19L32 6Z"></path>
+                                <path d="m10 19 22 13 22-13M32 32v26"></path>
+                            </svg>
+                        </div>
+                        <div class="informacoes-projeto">
+                            <h3>App Barato</h3>
+                            <p>Compara preços e quantidades para indicar o melhor custo-benefício.</p>
+                            <span class="visibilidade-projeto projeto-publico">Público</span>
                         </div>
                     </a>
 
                     <a
-                        class="project-card project-link"
+                        class="cartao-projeto"
                         href="https://github.com/JeanLuis-DEV/Diluicao-Simples"
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label="Ver Diluição Simples no GitHub"
+                        aria-label="Abrir o projeto Diluição Simples no GitHub"
                     >
-                        <img src="assets/images/diluicao-simples.png" alt="Tela do projeto Diluição Simples">
-                        <div class="project-content">
-                            <div class="project-title">
-                                <div class="project-name">
-                                    <svg class="project-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M32 6c13 13 18 24 18 34 0 11-8 18-18 18s-18-7-18-18C14 30 19 19 32 6Z"></path><path d="M32 48c-6-5-6-12 0-19 6 7 6 14 0 19Z"></path></svg>
-                                    <h3>Diluição Simples</h3>
-                                </div>
-                                <span class="project-status">Público</span>
-                            </div>
-                            <p>
-                                Aplicativo mobile offline para calcular diluições de produtos de
-                                limpeza automotiva de forma rápida e precisa.
-                            </p>
+                        <div class="area-visual-projeto" aria-hidden="true">
+                            <img class="fundo-projeto" src="assets/images/diluicao-simples.png" alt="">
+                            <svg class="icone-projeto" viewBox="0 0 64 64" fill="none">
+                                <path d="M32 6c13 13 18 24 18 34 0 11-8 18-18 18s-18-7-18-18C14 30 19 19 32 6Z"></path>
+                                <path d="M32 48c-6-5-6-12 0-19 6 7 6 14 0 19Z"></path>
+                            </svg>
+                        </div>
+                        <div class="informacoes-projeto">
+                            <h3>Diluição Simples</h3>
+                            <p>Calcula diluições com rapidez, precisão e funcionamento offline.</p>
+                            <span class="visibilidade-projeto projeto-publico">Público</span>
                         </div>
                     </a>
 
                     <a
-                        class="project-card project-link"
+                        class="cartao-projeto"
                         href="https://github.com/JeanLuis-DEV/Golpes-Digitais-Detector"
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label="Ver Detector de Golpes Digitais no GitHub"
+                        aria-label="Abrir o projeto Detector de Golpes Digitais no GitHub"
                     >
-                        <img src="assets/images/detector-golpes-digitais.png" alt="Tela do projeto Detector de Golpes Digitais">
-                        <div class="project-content">
-                            <div class="project-title">
-                                <div class="project-name">
-                                    <svg class="project-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="m32 6 20 8v15c0 13-8 22-20 28C20 51 12 42 12 29V14l20-8Z"></path><path d="m32 23 3 7 8 1-6 5 2 8-7-4-7 4 2-8-6-5 8-1 3-7Z"></path></svg>
-                                    <h3>Detector de Golpes Digitais</h3>
-                                </div>
-                                <span class="project-status">Público</span>
-                            </div>
-                            <p>
-                                Aplicação desktop em Java que analisa mensagens e identifica sinais
-                                comuns de golpes digitais, apresentando uma classificação de risco
-                                e os motivos encontrados.
-                            </p>
+                        <div class="area-visual-projeto" aria-hidden="true">
+                            <img class="fundo-projeto" src="assets/images/detector-golpes-digitais.png" alt="">
+                            <svg class="icone-projeto" viewBox="0 0 64 64" fill="none">
+                                <path d="m32 6 20 8v15c0 13-8 22-20 28C20 51 12 42 12 29V14l20-8Z"></path>
+                                <path d="m32 23 3 7 8 1-6 5 2 8-7-4-7 4 2-8-6-5 8-1 3-7Z"></path>
+                            </svg>
+                        </div>
+                        <div class="informacoes-projeto">
+                            <h3>Detector de Golpes Digitais</h3>
+                            <p>Analisa mensagens e identifica sinais comuns de golpes digitais.</p>
+                            <span class="visibilidade-projeto projeto-publico">Público</span>
                         </div>
                     </a>
 
-                    <article class="project-card">
-                        <img src="assets/images/gastos-simples.png" alt="Tela do projeto Gastos Simples">
-                        <div class="project-content">
-                            <div class="project-title">
-                                <div class="project-name">
-                                    <svg class="project-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M12 18h40a6 6 0 0 1 6 6v28a6 6 0 0 1-6 6H12a6 6 0 0 1-6-6V24a6 6 0 0 1 6-6Z"></path><path d="M6 28h52M40 39h10"></path><path d="M15 18V12h25l9 6"></path></svg>
-                                    <h3>Gastos Simples</h3>
-                                </div>
-                                <span class="project-status private-status">Privado</span>
-                            </div>
-                            <p>
-                                Aplicativo para organizar despesas e receitas, acompanhar o resumo
-                                financeiro mensal e facilitar o controle das finanças pessoais. Também
-                                possui recursos voltados à divisão de gastos entre pessoas e calculadora integrada.
-                            </p>
+                    <a
+                        class="cartao-projeto"
+                        href="https://github.com/JeanLuis-DEV/Gastos-Simples-Source"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Abrir o projeto Gastos Simples no GitHub"
+                    >
+                        <div class="area-visual-projeto" aria-hidden="true">
+                            <img class="fundo-projeto" src="assets/images/gastos-simples.png" alt="">
+                            <svg class="icone-projeto" viewBox="0 0 64 64" fill="none">
+                                <path d="M12 18h40a6 6 0 0 1 6 6v28a6 6 0 0 1-6 6H12a6 6 0 0 1-6-6V24a6 6 0 0 1 6-6Z"></path>
+                                <path d="M6 28h52M40 39h10"></path>
+                                <path d="M15 18V12h25l9 6"></path>
+                            </svg>
                         </div>
-                    </article>
+                        <div class="informacoes-projeto">
+                            <h3>Gastos Simples</h3>
+                            <p>Organiza receitas, despesas e o controle das finanças pessoais.</p>
+                            <span class="visibilidade-projeto projeto-privado">Privado</span>
+                        </div>
+                    </a>
 
-                    <article class="project-card">
-                        <img src="assets/images/orcamento-simples.png" alt="Tela do projeto Orçamento Simples">
-                        <div class="project-content">
-                            <div class="project-title">
-                                <div class="project-name">
-                                    <svg class="project-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M17 5h25l12 12v42H17V5Z"></path><path d="M42 5v13h12M26 30h20M26 40h20M26 50h13"></path></svg>
-                                    <h3>Orçamento Simples</h3>
-                                </div>
-                                <span class="project-status private-status">Privado</span>
-                            </div>
-                            <p>
-                                Aplicativo para criar orçamentos profissionais, organizar clientes,
-                                serviços e materiais e gerar documentos em PDF.
-                            </p>
+                    <a
+                        class="cartao-projeto"
+                        href="https://github.com/JeanLuis-DEV/Orcamento-Simples"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Abrir o projeto Orçamento Simples no GitHub"
+                    >
+                        <div class="area-visual-projeto" aria-hidden="true">
+                            <img class="fundo-projeto" src="assets/images/orcamento-simples.png" alt="">
+                            <svg class="icone-projeto" viewBox="0 0 64 64" fill="none">
+                                <path d="M17 5h25l12 12v42H17V5Z"></path>
+                                <path d="M42 5v13h12M26 30h20M26 40h20M26 50h13"></path>
+                            </svg>
                         </div>
-                    </article>
+                        <div class="informacoes-projeto">
+                            <h3>Orçamento Simples</h3>
+                            <p>Cria orçamentos profissionais e gera documentos em PDF.</p>
+                            <span class="visibilidade-projeto projeto-privado">Privado</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Contato e redes sociais -->
-        <section class="contact-section" id="contato">
-            <div class="contact-lines contact-lines-left" aria-hidden="true">
+        <!-- Seção Contato: oferece links para LinkedIn e GitHub. -->
+        <section class="secao-contato" id="contato">
+            <div class="linhas-decorativas-contato linhas-contato-esquerda" aria-hidden="true">
                 <span></span><span></span><span></span><span></span>
             </div>
-            <div class="contact-lines contact-lines-right" aria-hidden="true">
+            <div class="linhas-decorativas-contato linhas-contato-direita" aria-hidden="true">
                 <span></span><span></span><span></span><span></span>
             </div>
 
-            <div class="container contact-content">
-                <p class="contact-label">Vamos nos conectar?</p>
-                <h2 class="contact-title">Acompanhe meu trabalho <span>e meus projetos.</span></h2>
-                <span class="contact-line" aria-hidden="true"></span>
-                <p class="contact-text">
+            <div class="conteudo-centralizado conteudo-contato">
+                <p class="rotulo-contato">Vamos nos conectar?</p>
+                <h2 class="titulo-contato">Acompanhe meu trabalho <span>e meus projetos.</span></h2>
+                <span class="linha-titulo-contato" aria-hidden="true"></span>
+                <p class="texto-contato">
                     Estou sempre <strong>evoluindo</strong>, construindo soluções e aprendendo algo novo.
                     Me acompanhe nas redes para conhecer meus <strong>projetos, contribuições e atualizações.</strong>
                 </p>
 
-                <div class="social-links">
+                <div class="lista-redes-sociais">
                     <a
-                        class="social-card"
+                        class="cartao-rede-social"
                         href="https://www.linkedin.com/in/jeanluismachado/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <span class="social-icon linkedin-icon" aria-hidden="true">in</span>
-                        <span class="social-info">
+                        <span class="icone-rede-social icone-linkedin" aria-hidden="true">in</span>
+                        <span class="informacoes-rede-social">
                             <strong>LinkedIn</strong>
                             <span>/in/jeanluismachado</span>
                         </span>
-                        <span class="social-arrow" aria-hidden="true">→</span>
+                        <span class="seta-rede-social" aria-hidden="true">→</span>
                     </a>
 
                     <a
-                        class="social-card"
+                        class="cartao-rede-social"
                         href="https://github.com/JeanLuis-DEV"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <svg class="social-icon github-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <svg class="icone-rede-social icone-github" viewBox="0 0 24 24" aria-hidden="true">
                             <path d="M12 .297C5.373.297 0 5.67 0 12.297c0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.016-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.838 1.237 1.838 1.237 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.605-2.665-.303-5.467-1.333-5.467-5.93 0-1.31.467-2.38 1.235-3.22-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23A11.5 11.5 0 0 1 12 6.8c1.02.005 2.047.138 3.006.405 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.807 5.625-5.48 5.922.43.37.814 1.1.814 2.218 0 1.606-.015 2.903-.015 3.297 0 .322.216.694.825.576C20.565 22.094 24 17.6 24 12.297 24 5.67 18.627.297 12 .297Z"></path>
                         </svg>
-                        <span class="social-info">
+                        <span class="informacoes-rede-social">
                             <strong>GitHub</strong>
                             <span>/JeanLuis-DEV</span>
                         </span>
-                        <span class="social-arrow" aria-hidden="true">→</span>
+                        <span class="seta-rede-social" aria-hidden="true">→</span>
                     </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
+    <!-- Rodapé com a identificação do autor. -->
+    <footer class="rodape">
         <p>© 2026 Jean Luis Machado</p>
     </footer>
 
-    <button class="back-to-top" type="button" aria-label="Voltar ao topo da página">
-        ↑ Topo
+    <!-- O JavaScript mostra este botão depois que a página é rolada. -->
+    <button class="botao-topo" type="button" aria-label="Voltar ao topo da página">
+        Topo
     </button>
 
-    <script src="js/script.js"></script>
+    <script src="js/botao-topo.js"></script>
 </body>
 </html>

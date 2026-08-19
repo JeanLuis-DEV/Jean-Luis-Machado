@@ -1,130 +1,58 @@
-# 👨‍💻 Portfólio de Aprendizado | Desenvolvimento Back-end Java
+# Portfólio de Jean Luis
 
-<p align="center">
-  <b>Em evolução constante 🚀</b><br>
-  Focado em desenvolvimento Back-end com Java
-</p>
+Portfólio pessoal desenvolvido com HTML, CSS e JavaScript puro. O site apresenta minha trajetória, competências, projetos e formas de contato.
 
----
+## Como o projeto funciona
 
-## 🎯 Sobre mim
+- **HTML:** organiza o conteúdo da página, como títulos, textos, imagens e links.
+- **CSS:** altera a aparência dos elementos, como cores, tamanhos, espaços e alinhamentos.
+- **JavaScript:** controla o botão **Topo**, que faz a página retornar suavemente ao início.
 
-Sou um desenvolvedor em formação com foco em **Back-end Java**, construindo uma base sólida em lógica de programação, orientação a objetos e boas práticas de desenvolvimento.
+Não é necessário instalar biblioteca ou programa adicional para abrir o projeto.
 
-Tenho como objetivo aplicar meus conhecimentos na construção de sistemas eficientes, organizados e escaláveis.
-
----
-
-## 🧠 Stack em desenvolvimento
-
-<p>
-  ☕ Java &nbsp;&nbsp;
-  🧱 Programação Orientada a Objetos &nbsp;&nbsp;
-  ⚙️ Lógica de Programação &nbsp;&nbsp;
-  🔄 Metodologias Ágeis &nbsp;&nbsp;
-  🛠️ Git & GitHub &nbsp;&nbsp;
-  🌐 Fundamentos de Front-end
-</p>
-
----
-
-## 📚 Formação e Aprendizado
-
-### 🟢 Fundamentos de Programação
-
-* Algoritmos e Lógica de Programação
-* Estruturas condicionais e de repetição
-* Resolução de problemas
-
-📂 Detalhes: `./cursos/curso-logica.md`
-
----
-
-### ☕ Desenvolvimento com Java
-
-* Sintaxe e estrutura da linguagem
-* Métodos e organização de código
-* Introdução à orientação a objetos
-
-📂 Detalhes: `./cursos/curso-java.md`
-
----
-
-### 🧱 Programação Orientada a Objetos
-
-🚧 Em andamento
-
-* Classes e objetos
-* Encapsulamento
-* Herança e polimorfismo
-
-📂 Detalhes: `./cursos/curso-poo.md`
-
----
-
-### 🔄 Metodologias Ágeis
-
-* Scrum (Sprints, Daily, Backlog)
-* Organização e fluxo de trabalho
-* Colaboração em equipe
-
-📂 Detalhes: `./cursos/curso-agil.md`
-
----
-
-### 🛠️ Versionamento de Código
-
-* Git (commits, branches, merge)
-* GitHub (repositórios e fluxo de trabalho)
-
-📂 Detalhes: `./cursos/curso-git.md`
-
----
-
-## 📊 Evolução
+## Organização dos arquivos
 
 ```text
-Lógica de Programação  ██████████ 100%
-Java Básico            █████████░ 80%
-POO                    ██████░░░░ 60%
-Git & GitHub           ████████░░ 75%
-Metodologias Ágeis     ████████░░ 80%
+Portfólio/
+├── index.html                 Conteúdo completo da página
+├── css/
+│   ├── geral.css              Regras usadas em todas as seções
+│   ├── cabecalho.css          Cabeçalho e menu de navegação
+│   ├── inicio.css             Apresentação inicial
+│   ├── sobre.css              Seção Sobre
+│   ├── competencias.css       Competências, certificações e formação
+│   ├── projetos.css           Cartões dos projetos
+│   ├── contato.css            Contato e redes sociais
+│   └── rodape.css             Rodapé e botão Topo
+├── js/
+│   └── botao-topo.js          Exibição e rolagem suave do botão Topo
+└── assets/images/             Imagens exibidas na página
 ```
 
----
+Cada parte visual possui seu próprio arquivo CSS. Assim, uma alteração na seção **Projetos**, por exemplo, deve ser procurada primeiro em `css/projetos.css`.
 
-## 🚀 Próximos passos
+## Nomes usados no código
 
-* 📌 Estruturas de Dados
-* 📌 Java Avançado
-* 📌 Spring Boot
-* 📌 Desenvolvimento de APIs REST
+As classes foram escritas em português e descrevem o elemento ao qual pertencem. Alguns exemplos:
 
----
+- `.menu-principal`: conjunto de links do cabeçalho;
+- `.foto-perfil`: foto exibida na apresentação;
+- `.cartao-projeto`: cartão clicável de um projeto;
+- `.informacoes-projeto`: nome, descrição e visibilidade do projeto;
+- `.botao-topo`: botão que retorna ao início da página.
 
-## 💻 Abordagem de aprendizado
+Todas as linhas dos arquivos CSS possuem um comentário ao lado explicando o efeito visual da regra.
 
-Busco sempre:
+## Como abrir
 
-* Entender o **porquê** das soluções
-* Escrever código limpo e organizado
-* Aplicar conceitos na prática
-* Evoluir de forma consistente
+1. Abra a pasta do projeto.
+2. Clique duas vezes no arquivo `index.html`.
+3. O portfólio será aberto no navegador padrão.
 
----
+## Seções da página
 
-## 📌 Sobre este repositório
-
-Este repositório foi criado como um **portfólio de aprendizado**, reunindo:
-
-* Resumos técnicos
-* Conceitos fundamentais
-* Exemplos práticos de código
-
-Não se trata de um repositório de projetos completos, mas sim de uma documentação estruturada da minha evolução como desenvolvedor.
-
----
-
-## 📫 Contato
-
-Em breve...
+- **Início:** foto e apresentação profissional.
+- **Sobre:** resumo da trajetória e objetivos.
+- **Competências:** conhecimentos, certificações e formação.
+- **Projetos:** cinco projetos com descrição e link para o GitHub.
+- **Contato:** links para LinkedIn e GitHub.

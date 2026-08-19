@@ -1,0 +1,53 @@
+/* Este arquivo estiliza o rodapé e o botão que retorna ao topo. */
+.rodape { /* Seleciona a faixa final da página. */
+    padding: 18px; /* Cria espaço interno ao redor do texto do rodapé. */
+    border-top: 1px solid var(--cor-borda); /* Desenha uma linha discreta acima do rodapé. */
+    color: var(--cor-texto-secundario); /* Exibe o texto do rodapé em cinza suave. */
+    text-align: center; /* Centraliza o texto horizontalmente. */
+    font-size: 0.82rem; /* Deixa o texto do rodapé pequeno e discreto. */
+} /* Encerra os estilos do rodapé. */
+
+.rodape p { /* Seleciona o parágrafo dentro do rodapé. */
+    margin: 0; /* Remove o espaço padrão ao redor do parágrafo. */
+} /* Encerra os estilos do texto do rodapé. */
+
+.botao-topo { /* Seleciona o botão fixo que retorna ao início da página. */
+    position: fixed; /* Mantém o botão preso à tela durante a rolagem. */
+    right: 24px; /* Posiciona o botão a 24 pixels da lateral direita. */
+    bottom: 24px; /* Posiciona o botão a 24 pixels da parte inferior. */
+    z-index: 2; /* Mantém o botão acima do conteúdo da página. */
+    padding: 12px 16px; /* Cria espaço interno ao redor da palavra Topo. */
+    border: 1px solid var(--cor-destaque); /* Desenha uma borda dourada ao redor do botão. */
+    border-radius: 999px; /* Deixa as laterais do botão completamente arredondadas. */
+    background: var(--cor-superficie); /* Aplica ao botão o fundo escuro dos cartões. */
+    color: var(--cor-destaque); /* Exibe o texto do botão na cor dourada. */
+    cursor: pointer; /* Mostra a mão do mouse para indicar que o botão é clicável. */
+    font: inherit; /* Faz o botão usar a mesma fonte do restante da página. */
+    font-size: 0.9rem; /* Deixa o texto do botão um pouco menor que o texto comum. */
+    opacity: 0; /* Mantém o botão invisível antes de a página ser rolada. */
+    pointer-events: none; /* Impede cliques enquanto o botão estiver invisível. */
+    transform: translateY(12px); /* Deixa o botão ligeiramente abaixo da posição final. */
+    transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease; /* Suaviza a entrada, a saída e a troca do fundo. */
+} /* Encerra os estilos do botão Topo. */
+
+.botao-topo:hover { /* Seleciona o botão quando o mouse passa sobre ele. */
+    background: #221b0b; /* Clareia levemente o fundo para indicar a interação. */
+} /* Encerra o efeito ao passar o mouse. */
+
+.botao-topo.visivel { /* Seleciona o botão depois que o JavaScript o torna visível. */
+    opacity: 1; /* Exibe completamente o botão. */
+    pointer-events: auto; /* Permite clicar no botão visível. */
+    transform: translateY(0); /* Move o botão para a posição final. */
+} /* Encerra os estilos do botão visível. */
+
+.botao-topo:focus-visible { /* Seleciona o botão quando ele recebe foco pelo teclado. */
+    outline: 2px solid var(--cor-texto-principal); /* Desenha um contorno claro para indicar o foco. */
+    outline-offset: 3px; /* Afasta o contorno três pixels da borda. */
+} /* Encerra os estilos de foco do botão. */
+
+@media (max-width: 720px) { /* Aplica os ajustes abaixo em telas pequenas. */
+    .botao-topo { /* Ajusta a posição do botão em celulares. */
+        right: 16px; /* Aproxima o botão da lateral direita. */
+        bottom: 16px; /* Aproxima o botão da parte inferior. */
+    } /* Encerra o ajuste do botão em telas pequenas. */
+} /* Encerra os ajustes para telas de até 720 pixels. */

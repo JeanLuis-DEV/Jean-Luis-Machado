@@ -1,0 +1,193 @@
+/* Este arquivo estiliza a seção que apresenta os projetos. */
+.secao-projetos { /* Seleciona toda a área da seção de projetos. */
+    min-height: 100vh; /* Faz a seção ocupar pelo menos a altura inteira da tela. */
+    padding: 56px 0 80px; /* Cria espaço interno acima e abaixo dos projetos. */
+} /* Encerra os estilos da seção de projetos. */
+
+.secao-projetos .conteudo-centralizado { /* Seleciona o limite de largura usado apenas nesta seção. */
+    max-width: 1500px; /* Permite que os cinco projetos caibam lado a lado em telas grandes. */
+} /* Encerra o ajuste de largura da seção. */
+
+.cabecalho-projetos { /* Seleciona o título e a introdução dos projetos. */
+    margin-bottom: 44px; /* Separa o cabeçalho da grade de projetos. */
+} /* Encerra os estilos do cabeçalho dos projetos. */
+
+.linha-titulo-projetos { /* Seleciona a pequena linha decorativa abaixo do título. */
+    display: block; /* Faz a linha ocupar um espaço próprio. */
+    width: 72px; /* Define o comprimento da linha dourada. */
+    height: 2px; /* Define a espessura da linha dourada. */
+    margin: 16px auto 0; /* Centraliza a linha e cria espaço acima dela. */
+    background: var(--cor-destaque); /* Pinta a linha com a cor dourada do site. */
+} /* Encerra os estilos da linha do título. */
+
+.grade-projetos { /* Organiza os cartões de projeto em colunas. */
+    display: grid; /* Ativa o sistema de grade para alinhar os cartões. */
+    grid-template-columns: repeat(5, minmax(0, 1fr)); /* Cria cinco colunas com a mesma largura. */
+    gap: 24px; /* Cria espaço entre os cartões. */
+} /* Encerra os estilos da grade de projetos. */
+
+.cartao-projeto { /* Seleciona cada cartão clicável de projeto. */
+    display: flex; /* Ativa um alinhamento flexível dentro do cartão. */
+    min-height: 335px; /* Evita que o cartão fique baixo demais. */
+    flex-direction: column; /* Coloca a imagem acima das informações. */
+    overflow: hidden; /* Esconde partes da imagem que ultrapassarem o cartão. */
+    border: 1px solid var(--cor-borda); /* Desenha uma borda discreta ao redor do cartão. */
+    border-radius: 16px; /* Arredonda os cantos do cartão. */
+    background: var(--cor-superficie); /* Aplica o fundo escuro usado nos cartões. */
+    transition: transform 0.2s ease, border-color 0.2s ease; /* Suaviza o movimento e a mudança da borda. */
+} /* Encerra os estilos de cada cartão. */
+
+.cartao-projeto:hover { /* Seleciona o cartão quando o mouse passa sobre ele. */
+    border-color: #75602e; /* Torna a borda mais dourada durante a interação. */
+    transform: translateY(-4px); /* Move o cartão quatro pixels para cima. */
+} /* Encerra o efeito ao passar o mouse. */
+
+.area-visual-projeto { /* Seleciona a área que reúne a imagem e o ícone do projeto. */
+    position: relative; /* Cria uma referência para posicionar a imagem e o efeito. */
+    display: grid; /* Ativa uma grade simples para centralizar o ícone. */
+    flex: 0 0 165px; /* Mantém a área visual com 165 pixels de altura. */
+    overflow: hidden; /* Esconde a parte da imagem que ultrapassar a área. */
+    place-items: center; /* Centraliza o ícone na horizontal e na vertical. */
+} /* Encerra os estilos da área visual. */
+
+.area-visual-projeto::after { /* Cria uma camada de cor sobre a imagem do projeto. */
+    position: absolute; /* Posiciona a camada sobre toda a área visual. */
+    z-index: 1; /* Mantém a camada acima da imagem e abaixo do ícone. */
+    inset: 0; /* Encosta a camada nos quatro lados da área visual. */
+    background: radial-gradient(circle at center, rgba(217, 154, 0, 0.12), transparent 52%), linear-gradient(180deg, rgba(8, 8, 8, 0.2), rgba(8, 8, 8, 0.78)); /* Combina um brilho dourado com um escurecimento vertical. */
+    content: ""; /* Faz o navegador exibir a camada decorativa sem texto. */
+} /* Encerra os estilos da camada sobre a imagem. */
+
+.fundo-projeto { /* Seleciona a imagem usada como fundo de cada projeto. */
+    position: absolute; /* Coloca a imagem atrás do ícone. */
+    width: 100%; /* Faz a imagem ocupar toda a largura disponível. */
+    height: 100%; /* Faz a imagem ocupar toda a altura disponível. */
+    object-fit: cover; /* Preenche a área sem distorcer a proporção da imagem. */
+    object-position: center 28%; /* Ajusta o ponto da imagem que permanece visível. */
+    filter: grayscale(55%) saturate(65%) contrast(1.08); /* Reduz as cores e aumenta levemente o contraste. */
+    opacity: 0.3; /* Deixa a imagem discreta para evitar excesso de informação. */
+    transform: scale(1.04); /* Amplia um pouco a imagem para preencher melhor a área. */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Suaviza o destaque da imagem ao passar o mouse. */
+} /* Encerra os estilos da imagem de fundo. */
+
+.icone-projeto { /* Seleciona o símbolo central de cada projeto. */
+    position: relative; /* Permite colocar o ícone acima das camadas de fundo. */
+    z-index: 2; /* Mantém o ícone visível acima da imagem e do efeito. */
+    width: 74px; /* Define a largura do círculo que contém o ícone. */
+    height: 74px; /* Define a altura do círculo que contém o ícone. */
+    padding: 15px; /* Cria espaço entre o desenho e a borda do círculo. */
+    border: 1px solid rgba(217, 154, 0, 0.65); /* Desenha uma borda dourada semitransparente. */
+    border-radius: 50%; /* Transforma a área do ícone em um círculo. */
+    background: rgba(8, 8, 8, 0.72); /* Aplica um fundo escuro transparente atrás do desenho. */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35); /* Cria uma sombra abaixo do círculo. */
+    color: var(--cor-destaque); /* Define o ícone com a cor dourada do site. */
+    stroke: currentColor; /* Faz os traços do desenho usarem a cor definida acima. */
+    stroke-linecap: round; /* Arredonda as pontas dos traços do desenho. */
+    stroke-linejoin: round; /* Arredonda os encontros entre os traços. */
+    stroke-width: 1.7; /* Define a espessura dos traços do ícone. */
+} /* Encerra os estilos do ícone do projeto. */
+
+.cartao-projeto:hover .fundo-projeto { /* Seleciona a imagem quando o mouse está sobre o cartão. */
+    opacity: 0.42; /* Deixa a imagem um pouco mais visível. */
+    transform: scale(1.1); /* Amplia a imagem para criar um movimento suave. */
+} /* Encerra o efeito da imagem ao passar o mouse. */
+
+.informacoes-projeto { /* Seleciona o nome, a descrição e a visibilidade do projeto. */
+    display: flex; /* Ativa o alinhamento flexível das informações. */
+    flex: 1; /* Faz esta área preencher o espaço restante do cartão. */
+    min-height: 150px; /* Mantém espaço suficiente para os textos. */
+    flex-direction: column; /* Organiza as informações uma abaixo da outra. */
+    justify-content: center; /* Centraliza as informações na altura disponível. */
+    gap: 10px; /* Cria espaço entre o nome, a descrição e a etiqueta. */
+    padding: 20px 16px; /* Cria espaço interno ao redor das informações. */
+    border-top: 1px solid var(--cor-borda); /* Separa o texto da área visual do cartão. */
+    background: #0c0c0c; /* Aplica um fundo quase preto à área de informações. */
+    text-align: center; /* Centraliza todos os textos do cartão. */
+} /* Encerra os estilos das informações do projeto. */
+
+.informacoes-projeto h3 { /* Seleciona o nome de cada projeto. */
+    margin: 0; /* Remove o espaço padrão ao redor do título. */
+    font-size: 1.05rem; /* Define um tamanho de destaque moderado para o nome. */
+    line-height: 1.35; /* Cria uma altura confortável entre possíveis linhas do nome. */
+} /* Encerra os estilos do nome do projeto. */
+
+.informacoes-projeto p { /* Seleciona a breve descrição de cada projeto. */
+    margin: 0; /* Remove o espaço padrão ao redor do parágrafo. */
+    color: var(--cor-texto-secundario); /* Usa um cinza suave para a descrição. */
+    font-size: 0.84rem; /* Deixa a descrição menor que o nome do projeto. */
+    line-height: 1.5; /* Melhora a leitura quando a descrição ocupa mais de uma linha. */
+} /* Encerra os estilos da descrição do projeto. */
+
+.visibilidade-projeto { /* Seleciona a etiqueta Público ou Privado. */
+    align-self: center; /* Centraliza a etiqueta dentro do cartão. */
+    padding: 4px 10px; /* Cria espaço interno ao redor do texto da etiqueta. */
+    border: 1px solid; /* Desenha a borda cuja cor é definida abaixo. */
+    border-radius: 999px; /* Deixa as laterais da etiqueta completamente arredondadas. */
+    font-size: 0.7rem; /* Mantém o texto da etiqueta pequeno e discreto. */
+    font-weight: bold; /* Destaca o texto Público ou Privado. */
+    letter-spacing: 0.04em; /* Separa levemente as letras da etiqueta. */
+    line-height: 1; /* Evita altura extra dentro da etiqueta. */
+} /* Encerra os estilos compartilhados das etiquetas. */
+
+.projeto-publico { /* Seleciona a etiqueta de um projeto público. */
+    border-color: rgba(217, 154, 0, 0.55); /* Aplica uma borda dourada semitransparente. */
+    color: var(--cor-destaque); /* Exibe o texto Público em dourado. */
+} /* Encerra os estilos da etiqueta de projeto público. */
+
+.projeto-privado { /* Seleciona a etiqueta de um projeto privado. */
+    border-color: #3a3a3a; /* Aplica uma borda cinza escura. */
+    color: #8d8d8d; /* Exibe o texto Privado em cinza. */
+} /* Encerra os estilos da etiqueta de projeto privado. */
+
+@media (max-width: 1100px) { /* Aplica os ajustes abaixo em telas médias. */
+    .grade-projetos { /* Ajusta a quantidade de colunas dos projetos. */
+        grid-template-columns: repeat(3, minmax(0, 1fr)); /* Mostra três cartões por linha. */
+    } /* Encerra o ajuste da grade em telas médias. */
+} /* Encerra os ajustes para telas de até 1100 pixels. */
+
+@media (max-width: 720px) { /* Aplica os ajustes abaixo em tablets pequenos e celulares. */
+    .secao-projetos { /* Ajusta o espaço da seção em telas pequenas. */
+        padding: 64px 0; /* Deixa o espaço acima e abaixo com o mesmo tamanho. */
+    } /* Encerra o ajuste da seção em telas pequenas. */
+
+    .cabecalho-projetos { /* Ajusta a distância abaixo do título dos projetos. */
+        margin-bottom: 36px; /* Aproxima a grade do cabeçalho da seção. */
+    } /* Encerra o ajuste do cabeçalho em telas pequenas. */
+
+    .grade-projetos { /* Ajusta a grade para telas pequenas. */
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* Mostra dois cartões por linha. */
+        gap: 18px; /* Reduz o espaço entre os cartões. */
+    } /* Encerra o ajuste da grade em telas pequenas. */
+
+    .area-visual-projeto { /* Ajusta a altura da imagem dos projetos. */
+        flex-basis: 155px; /* Reduz a área visual para 155 pixels. */
+    } /* Encerra o ajuste da área visual em telas pequenas. */
+
+    .icone-projeto { /* Ajusta o círculo do ícone dos projetos. */
+        width: 64px; /* Reduz a largura do círculo. */
+        height: 64px; /* Reduz a altura do círculo. */
+    } /* Encerra o ajuste do ícone em telas pequenas. */
+
+    .informacoes-projeto { /* Ajusta a área de texto dos cartões. */
+        min-height: 145px; /* Reduz levemente a altura mínima das informações. */
+        padding: 18px 12px; /* Reduz o espaço interno das informações. */
+    } /* Encerra o ajuste das informações em telas pequenas. */
+
+    .informacoes-projeto h3 { /* Ajusta o nome dos projetos em telas pequenas. */
+        font-size: 0.95rem; /* Reduz o tamanho do nome do projeto. */
+    } /* Encerra o ajuste do nome em telas pequenas. */
+
+    .informacoes-projeto p { /* Ajusta a descrição dos projetos em telas pequenas. */
+        font-size: 0.8rem; /* Reduz o tamanho da descrição. */
+    } /* Encerra o ajuste da descrição em telas pequenas. */
+} /* Encerra os ajustes para telas de até 720 pixels. */
+
+@media (max-width: 480px) { /* Aplica os ajustes abaixo em celulares estreitos. */
+    .grade-projetos { /* Ajusta a grade para a menor largura. */
+        grid-template-columns: 1fr; /* Mostra um cartão por linha. */
+    } /* Encerra o ajuste da grade em celulares estreitos. */
+
+    .cartao-projeto { /* Ajusta a altura dos cartões em celulares estreitos. */
+        min-height: 310px; /* Reduz a altura mínima para aproveitar melhor a tela. */
+    } /* Encerra o ajuste dos cartões em celulares estreitos. */
+} /* Encerra os ajustes para telas de até 480 pixels. */

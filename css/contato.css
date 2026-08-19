@@ -1,0 +1,237 @@
+/* Este arquivo estiliza a seção de contato e os cartões das redes sociais. */
+.secao-contato { /* Seleciona toda a área da seção de contato. */
+    position: relative; /* Cria uma referência para posicionar as linhas decorativas. */
+    overflow: hidden; /* Esconde as partes da decoração que ultrapassarem a seção. */
+    min-height: 720px; /* Mantém uma altura ampla para destacar o contato. */
+    padding: 92px 0 120px; /* Cria espaço interno acima e abaixo do conteúdo. */
+} /* Encerra os estilos da seção de contato. */
+
+.conteudo-contato { /* Seleciona o bloco central com os textos e links. */
+    position: relative; /* Permite controlar a posição do conteúdo sobre a decoração. */
+    z-index: 1; /* Mantém o conteúdo acima das linhas decorativas. */
+    max-width: 1000px; /* Limita a largura do conteúdo para facilitar a leitura. */
+    text-align: center; /* Centraliza os textos e cartões da seção. */
+} /* Encerra os estilos do conteúdo de contato. */
+
+.rotulo-contato { /* Seleciona o pequeno texto exibido acima do título. */
+    margin: 0 0 20px; /* Remove espaços extras e separa o rótulo do título. */
+    color: var(--cor-destaque); /* Exibe o rótulo na cor dourada do site. */
+    font-size: 1rem; /* Mantém o rótulo com o tamanho padrão de texto. */
+    letter-spacing: 0.35em; /* Cria um espaço amplo entre as letras. */
+    text-transform: uppercase; /* Exibe todas as letras em maiúsculas. */
+} /* Encerra os estilos do rótulo de contato. */
+
+.titulo-contato { /* Seleciona a mensagem principal da seção de contato. */
+    max-width: 900px; /* Impede que o título fique largo demais. */
+    margin: 0 auto; /* Remove margens verticais e centraliza o título. */
+    font-size: 4rem; /* Exibe o título em tamanho grande. */
+    line-height: 1.12; /* Mantém as linhas do título próximas e legíveis. */
+    letter-spacing: -0.05em; /* Aproxima levemente as letras do título. */
+} /* Encerra os estilos do título de contato. */
+
+.titulo-contato span, .texto-contato strong { /* Seleciona as palavras destacadas nos textos de contato. */
+    color: var(--cor-destaque); /* Pinta as palavras selecionadas de dourado. */
+    font-weight: inherit; /* Mantém a mesma espessura usada no texto ao redor. */
+} /* Encerra os estilos dos destaques de texto. */
+
+.linha-titulo-contato { /* Seleciona a linha luminosa abaixo do título. */
+    display: block; /* Faz a linha ocupar um espaço próprio. */
+    width: 320px; /* Define o comprimento preferencial da linha. */
+    max-width: 70%; /* Impede que a linha ultrapasse telas estreitas. */
+    height: 1px; /* Define a espessura fina da linha. */
+    margin: 38px auto; /* Centraliza a linha e cria espaço acima e abaixo. */
+    background: linear-gradient(to right, transparent, var(--cor-destaque), transparent); /* Faz a cor dourada desaparecer nas duas pontas. */
+    box-shadow: 0 0 10px #b77a00; /* Cria um brilho dourado ao redor da linha. */
+} /* Encerra os estilos da linha do título. */
+
+.texto-contato { /* Seleciona o parágrafo que convida a entrar em contato. */
+    max-width: 780px; /* Limita a largura do texto para facilitar a leitura. */
+    margin: 0 auto 58px; /* Centraliza o texto e separa os cartões abaixo. */
+    color: var(--cor-texto-secundario); /* Usa um cinza suave no parágrafo. */
+    font-size: 1.35rem; /* Deixa o convite um pouco maior que o texto comum. */
+    line-height: 1.6; /* Cria espaço confortável entre as linhas. */
+} /* Encerra os estilos do texto de contato. */
+
+.lista-redes-sociais { /* Organiza os cartões do LinkedIn e GitHub. */
+    display: grid; /* Ativa o sistema de grade para os cartões. */
+    grid-template-columns: repeat(2, 1fr); /* Coloca os dois cartões lado a lado. */
+    gap: 40px; /* Cria espaço entre os cartões. */
+} /* Encerra os estilos da lista de redes sociais. */
+
+.cartao-rede-social { /* Seleciona cada cartão clicável de rede social. */
+    display: flex; /* Coloca ícone, informações e seta na mesma linha. */
+    align-items: center; /* Centraliza os itens na altura do cartão. */
+    gap: 22px; /* Cria espaço entre o ícone e as informações. */
+    padding: 28px 36px; /* Cria espaço interno ao redor do conteúdo. */
+    border: 1px solid #8a6517; /* Desenha uma borda dourada escura. */
+    border-radius: 20px; /* Arredonda os cantos do cartão. */
+    background: linear-gradient(135deg, #1a1a1a, #0d0d0d); /* Cria uma variação suave entre dois tons escuros. */
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.35); /* Cria profundidade com uma sombra abaixo do cartão. */
+    text-align: left; /* Alinha o nome e o endereço da rede à esquerda. */
+    transition: transform 0.2s ease, border-color 0.2s ease; /* Suaviza o movimento e a mudança da borda. */
+} /* Encerra os estilos dos cartões de rede social. */
+
+.cartao-rede-social:hover { /* Seleciona o cartão quando o mouse passa sobre ele. */
+    border-color: var(--cor-destaque); /* Clareia a borda para chamar atenção. */
+    transform: translateY(-4px); /* Move o cartão quatro pixels para cima. */
+} /* Encerra o efeito ao passar o mouse. */
+
+.icone-rede-social { /* Seleciona a área colorida do ícone de cada rede. */
+    width: 74px; /* Define a largura da área do ícone. */
+    height: 74px; /* Define a altura da área do ícone. */
+    flex-shrink: 0; /* Impede que o ícone seja comprimido em pouco espaço. */
+    border-radius: 14px; /* Arredonda os cantos da área do ícone. */
+    background: linear-gradient(135deg, #f5cc67, #b77a00); /* Cria um degradê dourado no fundo do ícone. */
+    color: #101010; /* Exibe o desenho do ícone em tom quase preto. */
+} /* Encerra os estilos compartilhados dos ícones. */
+
+.icone-linkedin { /* Seleciona apenas o ícone de texto do LinkedIn. */
+    display: grid; /* Ativa uma grade simples para centralizar as letras. */
+    place-items: center; /* Centraliza as letras na horizontal e na vertical. */
+    font-size: 3.2rem; /* Aumenta as letras que representam o LinkedIn. */
+    font-weight: bold; /* Deixa as letras do ícone mais grossas. */
+    letter-spacing: -0.08em; /* Aproxima as letras do símbolo. */
+} /* Encerra os estilos do ícone do LinkedIn. */
+
+.icone-github { /* Seleciona apenas o desenho do GitHub. */
+    padding: 10px; /* Cria espaço entre o desenho e as bordas douradas. */
+    fill: currentColor; /* Preenche o desenho com a cor quase preta definida acima. */
+} /* Encerra os estilos do ícone do GitHub. */
+
+.informacoes-rede-social { /* Seleciona o nome e o endereço da rede social. */
+    display: flex; /* Ativa o alinhamento flexível das duas informações. */
+    flex-direction: column; /* Coloca o endereço abaixo do nome da rede. */
+    min-width: 0; /* Permite que o endereço se adapte corretamente ao espaço. */
+} /* Encerra os estilos das informações da rede social. */
+
+.informacoes-rede-social strong { /* Seleciona o nome da rede social. */
+    font-size: 1.8rem; /* Exibe o nome da rede em tamanho de destaque. */
+} /* Encerra os estilos do nome da rede social. */
+
+.informacoes-rede-social span { /* Seleciona o endereço do perfil. */
+    margin-top: 4px; /* Cria um pequeno espaço abaixo do nome da rede. */
+    color: var(--cor-texto-secundario); /* Usa cinza para diferenciar o endereço. */
+    font-size: 1.05rem; /* Mantém o endereço em tamanho confortável. */
+} /* Encerra os estilos do endereço da rede social. */
+
+.seta-rede-social { /* Seleciona a seta exibida no fim de cada cartão. */
+    margin-left: auto; /* Empurra a seta para o lado direito do cartão. */
+    color: var(--cor-destaque); /* Exibe a seta na cor dourada. */
+    font-size: 2.7rem; /* Aumenta a seta para deixá-la visível. */
+    line-height: 1; /* Remove altura extra ao redor da seta. */
+} /* Encerra os estilos da seta. */
+
+.linhas-decorativas-contato { /* Seleciona cada conjunto de linhas no fundo da seção. */
+    position: absolute; /* Permite posicionar as linhas sem mover o conteúdo. */
+    bottom: -130px; /* Desloca parte da decoração para fora da seção. */
+    width: 43%; /* Define a largura de cada conjunto de linhas. */
+    height: 250px; /* Define a altura de cada conjunto de linhas. */
+    opacity: 0.65; /* Deixa a decoração discreta atrás do conteúdo. */
+} /* Encerra os estilos compartilhados das linhas decorativas. */
+
+.linhas-contato-esquerda { /* Seleciona as linhas decorativas do lado esquerdo. */
+    left: -60px; /* Move parte das linhas para fora da lateral esquerda. */
+    transform: rotate(-12deg); /* Inclina as linhas para a esquerda. */
+} /* Encerra os estilos das linhas do lado esquerdo. */
+
+.linhas-contato-direita { /* Seleciona as linhas decorativas do lado direito. */
+    right: -60px; /* Move parte das linhas para fora da lateral direita. */
+    transform: rotate(12deg); /* Inclina as linhas para a direita. */
+} /* Encerra os estilos das linhas do lado direito. */
+
+.linhas-decorativas-contato span { /* Seleciona cada linha curva da decoração. */
+    position: absolute; /* Sobrepõe as linhas para formar o desenho. */
+    right: 0; /* Alinha as linhas pela lateral direita do conjunto. */
+    bottom: 0; /* Alinha as linhas pela parte inferior do conjunto. */
+    width: 100%; /* Faz a primeira linha usar toda a largura disponível. */
+    height: 100%; /* Faz a primeira linha usar toda a altura disponível. */
+    border: 1px solid rgba(217, 154, 0, 0.28); /* Desenha a curva com dourado transparente. */
+    border-top: 0; /* Remove a borda superior para manter apenas a curva. */
+    border-radius: 0 0 50% 50%; /* Arredonda as duas pontas inferiores. */
+} /* Encerra os estilos das linhas curvas. */
+
+.linhas-decorativas-contato span:nth-child(2) { /* Seleciona a segunda linha curva. */
+    width: 90%; /* Deixa a segunda linha um pouco mais estreita. */
+    height: 86%; /* Deixa a segunda linha um pouco mais baixa. */
+} /* Encerra os estilos da segunda linha. */
+
+.linhas-decorativas-contato span:nth-child(3) { /* Seleciona a terceira linha curva. */
+    width: 80%; /* Deixa a terceira linha ainda mais estreita. */
+    height: 72%; /* Deixa a terceira linha ainda mais baixa. */
+} /* Encerra os estilos da terceira linha. */
+
+.linhas-decorativas-contato span:nth-child(4) { /* Seleciona a quarta linha curva. */
+    width: 70%; /* Define a menor largura do conjunto. */
+    height: 58%; /* Define a menor altura do conjunto. */
+} /* Encerra os estilos da quarta linha. */
+
+@media (max-width: 900px) { /* Aplica os ajustes abaixo em telas médias. */
+    .titulo-contato { /* Ajusta o tamanho do título de contato. */
+        font-size: 3.4rem; /* Reduz o título para caber melhor na tela. */
+    } /* Encerra o ajuste do título em telas médias. */
+
+    .lista-redes-sociais { /* Ajusta a distância entre os cartões. */
+        gap: 24px; /* Reduz o espaço entre as redes sociais. */
+    } /* Encerra o ajuste da lista em telas médias. */
+
+    .cartao-rede-social { /* Ajusta o espaço interno dos cartões. */
+        padding: 24px; /* Reduz o espaço ao redor do conteúdo. */
+    } /* Encerra o ajuste dos cartões em telas médias. */
+} /* Encerra os ajustes para telas de até 900 pixels. */
+
+@media (max-width: 720px) { /* Aplica os ajustes abaixo em tablets pequenos e celulares. */
+    .secao-contato { /* Ajusta a seção de contato em telas pequenas. */
+        min-height: auto; /* Permite que a altura acompanhe o conteúdo. */
+        padding: 72px 0 100px; /* Reduz o espaço interno da seção. */
+    } /* Encerra o ajuste da seção em telas pequenas. */
+
+    .titulo-contato { /* Ajusta o título de contato em telas pequenas. */
+        font-size: 2.7rem; /* Reduz o título para evitar cortes. */
+    } /* Encerra o ajuste do título em telas pequenas. */
+
+    .texto-contato { /* Ajusta o convite de contato em telas pequenas. */
+        margin-bottom: 40px; /* Aproxima os cartões do texto. */
+        font-size: 1.1rem; /* Reduz o tamanho do parágrafo. */
+    } /* Encerra o ajuste do texto em telas pequenas. */
+
+    .lista-redes-sociais { /* Ajusta a lista para telas pequenas. */
+        grid-template-columns: 1fr; /* Coloca um cartão de rede por linha. */
+    } /* Encerra o ajuste da lista em telas pequenas. */
+
+    .cartao-rede-social { /* Ajusta os cartões em telas pequenas. */
+        padding: 22px; /* Reduz um pouco mais o espaço interno. */
+    } /* Encerra o ajuste dos cartões em telas pequenas. */
+
+    .linhas-decorativas-contato { /* Ajusta a decoração em telas pequenas. */
+        width: 65%; /* Aumenta a largura proporcional das linhas. */
+        height: 180px; /* Reduz a altura das linhas. */
+    } /* Encerra o ajuste da decoração em telas pequenas. */
+} /* Encerra os ajustes para telas de até 720 pixels. */
+
+@media (max-width: 420px) { /* Aplica os ajustes abaixo em celulares estreitos. */
+    .rotulo-contato { /* Ajusta o pequeno texto acima do título. */
+        font-size: 0.8rem; /* Reduz o tamanho do rótulo. */
+        letter-spacing: 0.22em; /* Reduz o espaço entre as letras. */
+    } /* Encerra o ajuste do rótulo em celulares estreitos. */
+
+    .titulo-contato { /* Ajusta o título em celulares estreitos. */
+        font-size: 2.2rem; /* Reduz o título para a menor largura. */
+    } /* Encerra o ajuste do título em celulares estreitos. */
+
+    .icone-rede-social { /* Ajusta os ícones das redes sociais. */
+        width: 60px; /* Reduz a largura dos ícones. */
+        height: 60px; /* Reduz a altura dos ícones. */
+    } /* Encerra o ajuste dos ícones em celulares estreitos. */
+
+    .icone-linkedin { /* Ajusta apenas o símbolo do LinkedIn. */
+        font-size: 2.6rem; /* Reduz as letras do símbolo. */
+    } /* Encerra o ajuste do LinkedIn em celulares estreitos. */
+
+    .informacoes-rede-social strong { /* Ajusta o nome da rede social. */
+        font-size: 1.45rem; /* Reduz o nome da rede para caber no cartão. */
+    } /* Encerra o ajuste do nome em celulares estreitos. */
+
+    .informacoes-rede-social span { /* Ajusta o endereço do perfil. */
+        font-size: 0.88rem; /* Reduz o endereço para evitar cortes. */
+    } /* Encerra o ajuste do endereço em celulares estreitos. */
+} /* Encerra os ajustes para telas de até 420 pixels. */

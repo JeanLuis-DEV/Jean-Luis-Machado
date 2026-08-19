@@ -1,0 +1,42 @@
+/* Este arquivo estiliza o cabeçalho e o menu de navegação. */
+.cabecalho-principal { /* Seleciona a faixa do cabeçalho no topo da página. */
+    border-bottom: 1px solid var(--cor-borda); /* Desenha uma linha discreta abaixo do cabeçalho. */
+} /* Encerra os estilos do cabeçalho principal. */
+
+.navegacao-principal { /* Organiza os links de navegação dentro do cabeçalho. */
+    display: flex; /* Coloca o menu em um sistema de alinhamento flexível. */
+    align-items: center; /* Centraliza o menu verticalmente no cabeçalho. */
+    justify-content: flex-end; /* Posiciona o menu no lado direito da página. */
+    min-height: 72px; /* Garante uma altura confortável para o cabeçalho. */
+} /* Encerra os estilos da navegação principal. */
+
+.menu-principal { /* Organiza os quatro links do menu. */
+    display: flex; /* Mantém os links lado a lado. */
+    align-items: center; /* Alinha os links pela mesma linha vertical. */
+    gap: 24px; /* Cria espaço entre um link e outro. */
+    color: var(--cor-texto-secundario); /* Usa cinza nos links que não estão destacados. */
+    font-size: 0.9rem; /* Deixa o texto do menu um pouco menor que o texto comum. */
+} /* Encerra os estilos do menu principal. */
+
+.menu-principal a { /* Seleciona cada link dentro do menu. */
+    padding: 8px 0; /* Aumenta a área vertical disponível para clicar. */
+    transition: color 0.2s ease; /* Suaviza a mudança de cor ao passar o mouse. */
+} /* Encerra os estilos dos links do menu. */
+
+.menu-principal a:hover, .menu-principal a.ativo { /* Seleciona o link apontado pelo mouse e o link marcado como atual. */
+    color: var(--cor-destaque); /* Muda o link selecionado para dourado. */
+} /* Encerra o destaque dos links do menu. */
+
+@media (max-width: 720px) { /* Aplica os ajustes abaixo em telas pequenas. */
+    .navegacao-principal { /* Ajusta o espaço do menu em celulares. */
+        align-items: flex-start; /* Alinha o menu pelo início quando ele ocupa mais de uma linha. */
+        flex-direction: column; /* Permite que o conteúdo do cabeçalho seja organizado de cima para baixo. */
+        justify-content: center; /* Mantém o menu centralizado na altura do cabeçalho. */
+        padding: 16px 0; /* Cria espaço acima e abaixo do menu. */
+    } /* Encerra os ajustes da navegação em telas pequenas. */
+
+    .menu-principal { /* Ajusta os links do menu em telas pequenas. */
+        flex-wrap: wrap; /* Permite que os links passem para outra linha se faltar espaço. */
+        gap: 8px 20px; /* Define oito pixels entre linhas e vinte entre colunas. */
+    } /* Encerra os ajustes do menu em telas pequenas. */
+} /* Encerra os ajustes para telas de até 720 pixels. */

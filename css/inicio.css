@@ -1,0 +1,134 @@
+/* Este arquivo estiliza a primeira seção, que apresenta a foto e o nome. */
+.secao-inicio { /* Seleciona toda a área inicial do portfólio. */
+    display: flex; /* Permite alinhar o conteúdo verticalmente dentro da seção. */
+    align-items: center; /* Centraliza o conteúdo na altura disponível. */
+    min-height: calc(100vh - 126px); /* Faz a seção ocupar quase toda a altura visível da tela. */
+    padding: 64px 0; /* Cria espaço acima e abaixo do conteúdo. */
+} /* Encerra os estilos da seção inicial. */
+
+.conteudo-inicio { /* Organiza a foto e o texto de apresentação. */
+    display: flex; /* Coloca a foto e o texto lado a lado. */
+    align-items: center; /* Alinha a foto e o texto pelo centro vertical. */
+    justify-content: center; /* Centraliza o conjunto dentro da página. */
+    gap: 88px; /* Cria espaço entre a foto e o texto. */
+} /* Encerra os estilos do conteúdo inicial. */
+
+.foto-perfil { /* Cria o círculo que recorta a foto de perfil. */
+    width: 430px; /* Define a largura do círculo da foto. */
+    height: 430px; /* Define a altura igual à largura para formar um círculo. */
+    flex-shrink: 0; /* Impede que a foto seja espremida quando faltar espaço. */
+    overflow: hidden; /* Esconde as partes da imagem que ultrapassam o círculo. */
+    border: 1px solid #676767; /* Desenha uma borda cinza fina ao redor da foto. */
+    border-radius: 50%; /* Arredonda totalmente o elemento e cria o formato circular. */
+    background: var(--cor-superficie); /* Exibe um fundo escuro caso a imagem demore para carregar. */
+} /* Encerra os estilos do círculo da foto. */
+
+.foto-perfil img { /* Seleciona a imagem colocada dentro do círculo. */
+    width: 100%; /* Faz a imagem ocupar toda a largura do círculo. */
+    height: 100%; /* Faz a imagem ocupar toda a altura do círculo. */
+    object-fit: cover; /* Preenche o círculo sem deformar a proporção da foto. */
+    object-position: center 25%; /* Ajusta o enquadramento para destacar o rosto. */
+} /* Encerra os estilos da imagem de perfil. */
+
+.texto-apresentacao { /* Agrupa a saudação, o nome e a mensagem inicial. */
+    max-width: 580px; /* Limita a largura do texto para ele não se espalhar demais. */
+} /* Encerra os estilos do bloco de apresentação. */
+
+.saudacao, .mensagem-boas-vindas { /* Seleciona os dois textos menores da apresentação. */
+    margin: 0; /* Remove os espaços automáticos dos parágrafos. */
+    color: var(--cor-texto-principal); /* Mantém os textos na cor branca. */
+    font-weight: 300; /* Usa uma espessura de letra mais leve. */
+    letter-spacing: -0.04em; /* Aproxima levemente as letras. */
+} /* Encerra os estilos compartilhados dos textos da apresentação. */
+
+.saudacao { /* Seleciona a frase "Olá, meu nome é". */
+    font-size: 2.5rem; /* Define um tamanho grande, mas menor que o nome. */
+} /* Encerra os estilos da saudação. */
+
+.secao-inicio h1 { /* Seleciona o nome principal dentro da seção inicial. */
+    margin: 8px 0 20px; /* Cria pequenos espaços acima e abaixo do nome. */
+    font-size: 5.5rem; /* Deixa o nome como o maior texto da apresentação. */
+    line-height: 0.95; /* Reduz a altura da linha para compactar o nome. */
+    letter-spacing: -0.07em; /* Aproxima as letras para criar o estilo visual do título. */
+} /* Encerra os estilos do nome principal. */
+
+.secao-inicio h1 span { /* Seleciona a vírgula colocada depois do nome. */
+    color: var(--cor-destaque); /* Deixa a vírgula dourada. */
+} /* Encerra o destaque da vírgula. */
+
+.linha-apresentacao { /* Cria a linha decorativa abaixo do nome. */
+    display: block; /* Permite controlar largura, altura e margens da linha. */
+    width: 132px; /* Define o comprimento da linha. */
+    height: 1px; /* Deixa a linha bem fina. */
+    margin-bottom: 28px; /* Cria espaço entre a linha e a mensagem de boas-vindas. */
+    background: #515151; /* Aplica um cinza discreto na linha. */
+} /* Encerra os estilos da linha de apresentação. */
+
+.mensagem-boas-vindas { /* Seleciona a mensagem abaixo da linha decorativa. */
+    font-size: 2.3rem; /* Define um tamanho de destaque para a mensagem. */
+} /* Encerra os estilos da mensagem de boas-vindas. */
+
+@media (max-width: 900px) { /* Aplica os ajustes abaixo em tablets e telas médias. */
+    .conteudo-inicio { /* Ajusta a distância entre foto e texto em telas médias. */
+        gap: 48px; /* Reduz o espaço entre a foto e o texto. */
+    } /* Encerra o ajuste do conteúdo inicial. */
+
+    .foto-perfil { /* Ajusta o círculo da foto em telas médias. */
+        width: 360px; /* Reduz a largura da foto. */
+        height: 360px; /* Reduz a altura na mesma proporção. */
+    } /* Encerra o ajuste da foto em telas médias. */
+
+    .saudacao { /* Ajusta a saudação em telas médias. */
+        font-size: 2rem; /* Reduz o tamanho da saudação. */
+    } /* Encerra o ajuste da saudação. */
+
+    .secao-inicio h1 { /* Ajusta o nome principal em telas médias. */
+        font-size: 4.4rem; /* Reduz o nome para evitar falta de espaço. */
+    } /* Encerra o ajuste do nome principal. */
+
+    .mensagem-boas-vindas { /* Ajusta a mensagem final em telas médias. */
+        font-size: 1.9rem; /* Reduz o tamanho da mensagem. */
+    } /* Encerra o ajuste da mensagem. */
+} /* Encerra os ajustes para telas de até 900 pixels. */
+
+@media (max-width: 720px) { /* Aplica os ajustes abaixo em celulares e tablets pequenos. */
+    .secao-inicio { /* Ajusta a altura da seção inicial em telas pequenas. */
+        min-height: auto; /* Permite que a altura acompanhe o conteúdo. */
+        padding: 64px 0; /* Mantém espaço acima e abaixo da apresentação. */
+    } /* Encerra o ajuste da seção inicial. */
+
+    .conteudo-inicio { /* Reorganiza foto e texto em telas pequenas. */
+        flex-direction: column; /* Coloca a foto acima do texto. */
+        gap: 40px; /* Cria espaço entre a foto e o texto empilhados. */
+        text-align: center; /* Centraliza todos os textos da apresentação. */
+    } /* Encerra a reorganização do conteúdo inicial. */
+
+    .foto-perfil { /* Ajusta a foto em telas pequenas. */
+        width: 330px; /* Reduz a largura da foto. */
+        height: 330px; /* Reduz a altura na mesma proporção. */
+    } /* Encerra o ajuste da foto em telas pequenas. */
+
+    .linha-apresentacao { /* Centraliza a linha decorativa em telas pequenas. */
+        margin-right: auto; /* Usa espaço automático no lado direito. */
+        margin-left: auto; /* Usa espaço automático no lado esquerdo. */
+    } /* Encerra o ajuste da linha decorativa. */
+} /* Encerra os ajustes para telas de até 720 pixels. */
+
+@media (max-width: 420px) { /* Aplica os ajustes abaixo em celulares estreitos. */
+    .foto-perfil { /* Ajusta a foto em celulares estreitos. */
+        width: 270px; /* Reduz a largura da foto para caber na tela. */
+        height: 270px; /* Reduz a altura na mesma proporção. */
+    } /* Encerra o ajuste da foto em celulares estreitos. */
+
+    .saudacao { /* Ajusta a saudação em celulares estreitos. */
+        font-size: 1.65rem; /* Reduz a saudação para evitar quebra ruim. */
+    } /* Encerra o ajuste da saudação. */
+
+    .secao-inicio h1 { /* Ajusta o nome em celulares estreitos. */
+        font-size: 3.5rem; /* Reduz o nome para caber sem corte. */
+    } /* Encerra o ajuste do nome. */
+
+    .mensagem-boas-vindas { /* Ajusta a mensagem em celulares estreitos. */
+        font-size: 1.6rem; /* Reduz o tamanho da mensagem. */
+    } /* Encerra o ajuste da mensagem. */
+} /* Encerra os ajustes para telas de até 420 pixels. */

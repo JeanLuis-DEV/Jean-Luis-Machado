@@ -1,0 +1,128 @@
+/* Este arquivo estiliza a seção que apresenta a trajetória profissional. */
+.secao-sobre { /* Seleciona toda a área da seção Sobre. */
+    min-height: 100vh; /* Faz a seção ocupar pelo menos a altura inteira da tela. */
+    padding: 64px 0; /* Cria espaço acima e abaixo do conteúdo. */
+} /* Encerra os estilos da seção Sobre. */
+
+.conteudo-sobre { /* Organiza e limita o conteúdo interno da seção Sobre. */
+    max-width: 940px; /* Impede que os textos fiquem largos demais. */
+    text-align: center; /* Centraliza os textos e os elementos decorativos. */
+} /* Encerra os estilos do conteúdo da seção Sobre. */
+
+.decoracao-sobre { /* Organiza o ícone de pessoa e as duas linhas douradas. */
+    display: flex; /* Coloca linha, ícone e linha lado a lado. */
+    align-items: center; /* Alinha os três elementos pela mesma altura. */
+    justify-content: center; /* Centraliza a decoração na página. */
+    gap: 32px; /* Cria espaço entre o ícone e cada linha. */
+    margin-bottom: 12px; /* Separa a decoração do título. */
+    color: var(--cor-destaque); /* Define dourado como cor do ícone. */
+} /* Encerra os estilos da decoração da seção Sobre. */
+
+.decoracao-sobre span { /* Seleciona as duas linhas ao lado do ícone. */
+    width: 205px; /* Define o comprimento de cada linha. */
+    height: 1px; /* Deixa as linhas bem finas. */
+    background: linear-gradient(to right, transparent, var(--cor-destaque)); /* Faz a primeira linha surgir suavemente até o dourado. */
+} /* Encerra os estilos das linhas decorativas. */
+
+.decoracao-sobre span:last-child { /* Seleciona somente a linha que aparece depois do ícone. */
+    background: linear-gradient(to left, transparent, var(--cor-destaque)); /* Inverte o degradê para criar simetria. */
+} /* Encerra o ajuste da segunda linha decorativa. */
+
+.decoracao-sobre svg { /* Seleciona o desenho de pessoa no centro da decoração. */
+    width: 44px; /* Define a largura do ícone. */
+    height: 44px; /* Define a altura do ícone. */
+    stroke: currentColor; /* Usa o dourado definido no elemento que envolve o ícone. */
+    stroke-linecap: round; /* Arredonda as pontas das linhas do desenho. */
+    stroke-linejoin: round; /* Arredonda os encontros entre as linhas do desenho. */
+    stroke-width: 2; /* Define a espessura das linhas do ícone. */
+} /* Encerra os estilos do ícone da decoração. */
+
+.linha-titulo-sobre { /* Cria a pequena linha dourada abaixo do título. */
+    display: block; /* Permite definir largura, altura e margens. */
+    width: 54px; /* Define o comprimento da linha. */
+    height: 2px; /* Define uma espessura fina para a linha. */
+    margin: 18px auto 0; /* Centraliza a linha e cria espaço acima dela. */
+    background: var(--cor-destaque); /* Deixa a linha dourada. */
+} /* Encerra os estilos da linha abaixo do título. */
+
+.texto-sobre { /* Estiliza os parágrafos que contam a trajetória. */
+    max-width: 780px; /* Limita o comprimento das linhas para facilitar a leitura. */
+    margin: 34px auto 56px; /* Centraliza o texto e cria espaços acima e abaixo. */
+    color: var(--cor-texto-secundario); /* Usa cinza para uma leitura mais suave. */
+    font-size: 1.1rem; /* Deixa o texto um pouco maior que o tamanho padrão. */
+    line-height: 1.75; /* Aumenta a distância entre linhas. */
+} /* Encerra os estilos do texto da seção Sobre. */
+
+.texto-sobre p { /* Seleciona cada parágrafo da trajetória. */
+    margin: 0 0 24px; /* Remove outros espaços e separa um parágrafo do seguinte. */
+} /* Encerra os estilos dos parágrafos da trajetória. */
+
+.texto-sobre strong { /* Seleciona os nomes importantes destacados no texto. */
+    color: var(--cor-destaque); /* Deixa os nomes importantes dourados. */
+    font-weight: normal; /* Evita que o destaque fique em negrito. */
+} /* Encerra os estilos dos destaques do texto. */
+
+.lista-destaques { /* Organiza os três destaques abaixo da trajetória. */
+    display: grid; /* Usa uma grade para alinhar os cartões. */
+    grid-template-columns: repeat(3, 1fr); /* Cria três colunas com a mesma largura. */
+    text-align: center; /* Centraliza textos e ícones dentro dos cartões. */
+} /* Encerra os estilos da lista de destaques. */
+
+.cartao-destaque { /* Estiliza cada destaque individual. */
+    padding: 24px 32px; /* Cria espaço interno ao redor do conteúdo. */
+    border-left: 1px solid var(--cor-borda); /* Adiciona uma divisória no lado esquerdo. */
+} /* Encerra os estilos de cada cartão de destaque. */
+
+.cartao-destaque:first-child { /* Seleciona somente o primeiro cartão da lista. */
+    border-left: 0; /* Remove a divisória que não é necessária no primeiro cartão. */
+} /* Encerra o ajuste do primeiro cartão. */
+
+.icone-destaque { /* Estiliza o ícone de cada cartão de destaque. */
+    width: 56px; /* Define a largura do ícone. */
+    height: 56px; /* Define a altura do ícone. */
+    margin-bottom: 18px; /* Separa o ícone do título do cartão. */
+    color: var(--cor-destaque); /* Define dourado como cor do ícone. */
+    stroke: currentColor; /* Aplica o dourado às linhas do desenho. */
+    stroke-linecap: round; /* Arredonda as pontas das linhas. */
+    stroke-linejoin: round; /* Arredonda os encontros das linhas. */
+    stroke-width: 2; /* Define a espessura das linhas do ícone. */
+} /* Encerra os estilos dos ícones de destaque. */
+
+.cartao-destaque h3 { /* Seleciona o título de cada cartão de destaque. */
+    margin: 0 0 12px; /* Remove espaços extras e cria distância abaixo do título. */
+    font-size: 1.1rem; /* Define um tamanho de destaque moderado. */
+} /* Encerra os estilos dos títulos dos cartões. */
+
+.cartao-destaque p:last-child { /* Seleciona o texto descritivo de cada destaque. */
+    margin: 0; /* Remove os espaços automáticos do parágrafo. */
+    color: var(--cor-texto-secundario); /* Deixa a descrição em cinza. */
+    line-height: 1.6; /* Aumenta a distância entre linhas da descrição. */
+} /* Encerra os estilos das descrições dos cartões. */
+
+@media (max-width: 720px) { /* Aplica os ajustes abaixo em telas pequenas. */
+    .secao-sobre { /* Ajusta o espaço da seção Sobre em telas pequenas. */
+        padding: 64px 0; /* Mantém espaço acima e abaixo do conteúdo. */
+    } /* Encerra o ajuste da seção Sobre. */
+
+    .decoracao-sobre { /* Ajusta a decoração superior em telas pequenas. */
+        gap: 18px; /* Aproxima as linhas do ícone central. */
+    } /* Encerra o ajuste da decoração superior. */
+
+    .decoracao-sobre span { /* Ajusta as linhas decorativas em telas pequenas. */
+        width: 100px; /* Reduz o comprimento das linhas para elas caberem na tela. */
+    } /* Encerra o ajuste das linhas decorativas. */
+
+    .lista-destaques { /* Reorganiza os destaques em telas pequenas. */
+        grid-template-columns: 1fr; /* Coloca um cartão por linha. */
+    } /* Encerra o ajuste da lista de destaques. */
+
+    .cartao-destaque, .cartao-destaque:first-child { /* Seleciona todos os cartões, inclusive o primeiro. */
+        padding: 24px 0; /* Remove o preenchimento lateral e mantém o vertical. */
+        border-top: 1px solid var(--cor-borda); /* Usa uma linha superior para separar os cartões empilhados. */
+        border-left: 0; /* Remove as divisórias laterais do layout de três colunas. */
+    } /* Encerra os ajustes dos cartões em telas pequenas. */
+
+    .cartao-destaque:last-child { /* Seleciona somente o último cartão. */
+        border-bottom: 1px solid var(--cor-borda); /* Fecha a lista com uma linha na parte inferior. */
+    } /* Encerra o ajuste do último cartão. */
+} /* Encerra os ajustes para telas de até 720 pixels. */
